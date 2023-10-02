@@ -1,11 +1,10 @@
 import React from "react";
-import styles from "./LanguageSelector.module.css"; // veya './LanguageSelector.styles.ts' for Emotion
+import { Grid, Typography } from "@mui/material";
 
 const languageOptions = [
   { code: "en", label: "English", flag: "en.png" },
   { code: "fr", label: "French", flag: "fr.png" },
   { code: "es", label: "Spanish", flag: "es.png" },
-  // Diğer dil seçenekleri buraya eklenir
 ];
 
 const LanguageSelector: React.FC = () => {
@@ -18,25 +17,30 @@ const LanguageSelector: React.FC = () => {
   };
 
   return (
-    <div className={styles.languageSelector}>
+    <Grid sx={{ display: "flex", alignItems: "center", gap: "5px" }}>
+      <img
+        src="/images/us-flag.png"
+        alt="Selected Language Flag"
+        width={24}
+        height={16}
+      />
       <select
-        className={styles.selectElement}
-        id="languageSelect"
+        className="custom-select"
         onChange={handleLanguageChange}
+        style={{
+          color: "#444094",
+          fontSize: "20px",
+          fontWeight: 300,
+          outline: "none", //
+        }}
       >
         {languageOptions.map((option: any) => (
           <option key={option.code} value={option.code}>
-            <img
-              src="/images/us-flag.png"
-              alt="Selected Language Flag"
-              width={24} // Bayrak genişliği
-              height={16} // Bayrak yüksekliği
-            />
             {option.label}
           </option>
         ))}
       </select>
-    </div>
+    </Grid>
   );
 };
 
