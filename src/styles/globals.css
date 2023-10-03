@@ -16,20 +16,18 @@
   }
 }
 
-/* Özel stil */
 .custom-select {
   appearance: none;
   background-color: transparent;
-  background-image: url('/images/up-arrow.png'); /* Açılır okunuzun görüntüsü */
+  background-image: url("/images/up-arrow.png");
   background-repeat: no-repeat;
   background-position: right center;
-  padding: 8px 24px 8px 8px; /* Daha iyi bir görünüm için özelleştirilebilir */
+  padding: 8px 24px 8px 8px;
   background-size: 17px;
   color: #444094;
   cursor: pointer;
 }
 
-/* Açılır okun görünmemesi */
 .custom-select::-ms-expand {
   display: none;
 }
