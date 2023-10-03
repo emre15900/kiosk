@@ -11,55 +11,57 @@ interface ButtonProps {
 const buttons: readonly ButtonProps[] = [
   {
     id: 1,
-    title: "Cash \n Withdrawal",
-    icon: "/images/home-screen-icon-1.png",
+    title: "Touch to Payecards \n mobile application \n NFC",
+    icon: "/images/pin-screen-icon-1.png",
     link: "/pin",
   },
   {
     id: 2,
-    title: "Cash \n Deposit",
-    icon: "/images/home-screen-icon-2.png",
+    title: "Access by biometric \n verification",
+    icon: "/images/pin-screen-icon-2.png",
     link: "/pin",
   },
   {
     id: 3,
-    title: "Buy/Sell \n Crypto",
-    icon: "/images/home-screen-icon-3.png",
-    link: "/pin",
-  },
-  {
-    id: 4,
-    title: "Cross Border \n Money Transfer",
-    icon: "/images/home-screen-icon-4.png",
-    link: "/pin",
-  },
-  {
-    id: 5,
-    title: "Get Pay \n Visa Card",
-    icon: "/images/home-screen-icon-5.png",
-    link: "/pin",
-  },
-  {
-    id: 6,
-    title: "Service \n For Dealers",
-    icon: "/images/home-screen-icon-6.png",
-    link: "/pin",
-  },
-  {
-    id: 7,
-    title: "FX \n Exchange",
-    icon: "/images/home-screen-icon-7.png",
+    title: "Insert card",
+    icon: "/images/pin-screen-icon-3.png",
     link: "/pin",
   },
 ];
 
 export default function Home() {
   return (
-    <Grid sx={{padding: "40px"}}>
-      <Grid container spacing={2}>
+    <Grid sx={{ padding: "40px" }}>
+      <Grid
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+          flexDirection: "column",
+          gap: "10px",
+          mb: 7,
+          mt: 2,
+        }}
+      >
+        <Typography variant="h3" sx={{ color: "#444094", fontWeight: 100 }}>
+          Wellcome to Payecards
+        </Typography>
+        <Typography variant="h5" sx={{ color: "#444094", fontWeight: 100 }}>
+          Follow to your account process access to
+        </Typography>
+      </Grid>
+      <Grid
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "30px",
+        }}
+      >
         {buttons.map((button) => {
           return (
-            <Grid key={button.id} item xs={12} sm={6} md={3}>
+            <Grid key={button.id}>
               <Link href={button.link}>
                 <Card
                   sx={{
@@ -74,16 +76,16 @@ export default function Home() {
                     gap: "20px",
                     cursor: "pointer",
                     transition: "all 0.1s ease",
+                    minWidth: "340px",
+                    width: "380px",
                     maxWidth: "380px",
                     maxHeight: "500px",
+                    minHeight: "500px",
                     "&:hover": {
                       border: "1px solid #444094",
                     },
                   }}
                 >
-                  <Grid sx={{ width: "120px" }}>
-                    <img src={button.icon} alt="icon" width="100%" />
-                  </Grid>
                   <Typography
                     dangerouslySetInnerHTML={{
                       __html: button.title.replace("\n", "<br />"),
@@ -92,8 +94,12 @@ export default function Home() {
                       textAlign: "center",
                       color: "#444094",
                       fontSize: "22px",
+                      fontWeight: 100,
                     }}
                   ></Typography>
+                  <Grid sx={{ width: "120px" }}>
+                    <img src={button.icon} alt="icon" width="100%" />
+                  </Grid>
                   <Grid
                     sx={{
                       display: "flex",
@@ -102,15 +108,7 @@ export default function Home() {
                       width: "100%",
                       mt: 2,
                     }}
-                  >
-                    <Grid sx={{ width: "45px" }}>
-                      <img
-                        src="/images/arrow-right.png"
-                        alt="icon"
-                        width="100%"
-                      />
-                    </Grid>
-                  </Grid>
+                  ></Grid>
                 </Card>
               </Link>
             </Grid>
