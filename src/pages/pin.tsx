@@ -98,6 +98,251 @@ function Pin() {
             </Grid>
           </Grid>
         </Grid>
+        <Grid sx={{ mt: 3}}>Send</Grid>
+        <Grid
+          sx={{ display: "flex", flexDirection: "column", gap: "20px", mt: 4 }}
+        >
+          <Grid
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "30px",
+            }}
+          >
+            <Grid
+              sx={{
+                border: "1px solid #444094",
+                padding: "5px 30px",
+                borderRadius: "28px",
+                display: "flex",
+                textAlign: "center",
+                width: "60px",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+              }}
+            >
+              <Typography sx={{ fontSize: "28px", color: "#444094" }}>
+                1
+              </Typography>
+            </Grid>
+            <Grid
+              sx={{
+                border: "1px solid #444094",
+                padding: "5px 30px",
+                borderRadius: "28px",
+                display: "flex",
+                textAlign: "center",
+                width: "60px",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+              }}
+            >
+              <Typography sx={{ fontSize: "28px", color: "#444094" }}>
+                2
+              </Typography>
+            </Grid>
+            <Grid
+              sx={{
+                border: "1px solid #444094",
+                padding: "5px 30px",
+                borderRadius: "28px",
+                display: "flex",
+                textAlign: "center",
+                width: "60px",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+              }}
+            >
+              <Typography sx={{ fontSize: "28px", color: "#444094" }}>
+                3
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "30px",
+            }}
+          >
+            <Grid
+              sx={{
+                border: "1px solid #444094",
+                padding: "5px 30px",
+                borderRadius: "28px",
+                display: "flex",
+                textAlign: "center",
+                width: "60px",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+              }}
+            >
+              <Typography sx={{ fontSize: "28px", color: "#444094" }}>
+                4
+              </Typography>
+            </Grid>
+            <Grid
+              sx={{
+                border: "1px solid #444094",
+                padding: "5px 30px",
+                borderRadius: "28px",
+                display: "flex",
+                textAlign: "center",
+                width: "60px",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+              }}
+            >
+              <Typography sx={{ fontSize: "28px", color: "#444094" }}>
+                5
+              </Typography>
+            </Grid>
+            <Grid
+              sx={{
+                border: "1px solid #444094",
+                padding: "5px 30px",
+                borderRadius: "28px",
+                display: "flex",
+                textAlign: "center",
+                width: "60px",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+              }}
+            >
+              <Typography sx={{ fontSize: "28px", color: "#444094" }}>
+                6
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "30px",
+            }}
+          >
+            <Grid
+              sx={{
+                border: "1px solid #444094",
+                padding: "5px 30px",
+                borderRadius: "28px",
+                display: "flex",
+                textAlign: "center",
+                width: "60px",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+              }}
+            >
+              <Typography sx={{ fontSize: "28px", color: "#444094" }}>
+                7
+              </Typography>
+            </Grid>
+            <Grid
+              sx={{
+                border: "1px solid #444094",
+                padding: "5px 30px",
+                borderRadius: "28px",
+                display: "flex",
+                textAlign: "center",
+                width: "60px",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+              }}
+            >
+              <Typography sx={{ fontSize: "28px", color: "#444094" }}>
+                8
+              </Typography>
+            </Grid>
+            <Grid
+              sx={{
+                border: "1px solid #444094",
+                padding: "5px 30px",
+                borderRadius: "28px",
+                display: "flex",
+                textAlign: "center",
+                width: "60px",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+              }}
+            >
+              <Typography sx={{ fontSize: "28px", color: "#444094" }}>
+                9
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "30px",
+            }}
+          >
+            <Grid
+              sx={{
+                border: "1px solid #444094",
+                padding: "14px 19px",
+                borderRadius: "28px",
+                display: "flex",
+                textAlign: "center",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+                background: "#44319A"
+              }}
+            >
+              <Grid sx={{ width: "25px" }}>
+                <img src="/images/mic.png" alt="mic" width="100%" />
+              </Grid>
+            </Grid>
+            <Grid
+              sx={{
+                border: "1px solid #444094",
+                padding: "5px 30px",
+                borderRadius: "28px",
+                display: "flex",
+                textAlign: "center",
+                width: "60px",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+              }}
+            >
+              <Typography sx={{ fontSize: "28px", color: "#444094" }}>
+                0
+              </Typography>
+            </Grid>
+            <Grid
+              sx={{
+                border: "1px solid #444094",
+                padding: "19px 15px",
+                borderRadius: "28px",
+                display: "flex",
+                textAlign: "center",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+                background: "#44319A"
+              }}
+            >
+              <Grid sx={{ width: "30px" }}>
+                <img src="/images/left-arrow.png" alt="mic" width="100%" />
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
       </Card>
     </Grid>
   );
