@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import PyButton from "@/components/py-button";
 
 function Pin() {
   const [showPassword, setShowPassword] = React.useState(false);
@@ -109,7 +110,9 @@ function Pin() {
             />
           </FormControl>
         </Grid>
-        <Grid sx={{ mt: 3 }}>Login</Grid>
+        <Grid sx={{ mt: 2 }}>
+            <PyButton title="Login" padding="10px 5rem" />
+        </Grid>
         <Grid
           sx={{ mt: 2, color: "#444094", fontSize: "18px", cursor: "pointer" }}
         >

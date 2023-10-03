@@ -31,3 +31,7 @@
 .custom-select::-ms-expand {
   display: none;
 }
+
+.hoverButton:hover {
+  background: #5b56bd !important;
+}

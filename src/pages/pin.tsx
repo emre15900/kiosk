@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import PyButton from "@/components/py-button";
 
 function Pin() {
   const [showPassword, setShowPassword] = React.useState(false);
@@ -98,7 +99,9 @@ function Pin() {
             </Grid>
           </Grid>
         </Grid>
-        <Grid sx={{ mt: 3}}>Send</Grid>
+        <Grid sx={{ mt: 2}}>
+            <PyButton title="Send" padding="10px 5rem" />
+        </Grid>
         <Grid
           sx={{ display: "flex", flexDirection: "column", gap: "20px", mt: 4 }}
         >
