@@ -54,68 +54,84 @@ const buttons: readonly ButtonProps[] = [
 ];
 
 export default function Home() {
+  const rows: any[][] = [];
+  let currentRow: any[] = [];
+
+  buttons.forEach((button, index) => {
+    currentRow.push(button);
+
+    // Her birinci satırda 3 kart, ikinci satırda 4 kart olacak şekilde kontrol ediyoruz
+    if ((index + 1) % 7 === 0 || index === buttons.length - 1) {
+      rows.push(currentRow);
+      currentRow = [];
+    }
+  });
+
   return (
-    <Grid sx={{padding: "40px"}}>
+    <Grid sx={{ padding: "40px" }}>
       <Grid container spacing={2}>
-        {buttons.map((button) => {
-          return (
-            <Grid key={button.id} item xs={12} sm={6} md={3}>
-              <Link href={button.link}>
-                <Card
-                  sx={{
-                    background: "#F4F4F4",
-                    borderRadius: "30px",
-                    padding: "90px 30px 50px 30px",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    boxShadow: "none",
-                    gap: "20px",
-                    cursor: "pointer",
-                    transition: "all 0.1s ease",
-                    maxWidth: "380px",
-                    maxHeight: "500px",
-                    "&:hover": {
-                      border: "1px solid #444094",
-                    },
-                  }}
-                >
-                  <Grid sx={{ width: "120px" }}>
-                    <img src={button.icon} alt="icon" width="100%" />
-                  </Grid>
-                  <Typography
-                    dangerouslySetInnerHTML={{
-                      __html: button.title.replace("\n", "<br />"),
-                    }}
+        {rows?.map((row, rowIndex) => (
+          <Grid key={rowIndex} container justifyContent="center" spacing={2}>
+            {row.map((button: any) => (
+              <Grid key={button.id} item xs={12} sm={6} md={3}>
+                <Link href={button.link}>
+                  <Card
                     sx={{
-                      textAlign: "center",
-                      color: "#444094",
-                      fontSize: "22px",
-                    }}
-                  ></Typography>
-                  <Grid
-                    sx={{
+                      background: "#F4F4F4",
+                      borderRadius: "30px",
+                      padding: "90px 30px 50px 30px",
                       display: "flex",
-                      justifyContent: "flex-end",
-                      alignItems: "flex-end",
-                      width: "100%",
-                      mt: 2,
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      boxShadow: "none",
+                      gap: "20px",
+                      cursor: "pointer",
+                      transition: "all 0.1s ease",
+                      maxWidth: "380px",
+                      maxHeight: "500px",
+                      minHeight: "430px",
+                      "&:hover": {
+                        border: "1px solid #444094",
+                      },
                     }}
                   >
-                    <Grid sx={{ width: "45px" }}>
-                      <img
-                        src="/images/arrow-right.png"
-                        alt="icon"
-                        width="100%"
-                      />
+                    <Grid sx={{ width: "120px" }}>
+                      <img src={button.icon} alt="icon" width="100%" />
                     </Grid>
-                  </Grid>
-                </Card>
-              </Link>
-            </Grid>
-          );
-        })}
+                    <Typography
+                      dangerouslySetInnerHTML={{
+                        __html: button.title.replace("\n", "<br />"),
+                      }}
+                      sx={{
+                        textAlign: "center",
+                        color: "#444094",
+                        fontSize: "22px",
+                      }}
+                    ></Typography>
+                    <Grid
+                      sx={{
+                        display: "flex",
+                        justifyContent: "flex-end",
+                        alignItems: "flex-end",
+                        width: "100%",
+                        mt: 2,
+                      }}
+                    >
+                      <Grid sx={{ width: "45px" }}>
+                        <img
+                          src="/images/arrow-right.png"
+                          alt="icon"
+                          width="100%"
+                        />
+                      </Grid>
+                    </Grid>
+                  </Card>
+                </Link>
+              </Grid>
+            ))}
+          </Grid>
+        ))}
       </Grid>
     </Grid>
   );
