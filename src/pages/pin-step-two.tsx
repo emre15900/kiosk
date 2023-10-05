@@ -29,7 +29,7 @@ const buttons: readonly ButtonProps[] = [
   },
 ];
 
-export default function Home() {
+export default function PinStepTwo() {
   return (
     <Grid sx={{ padding: "40px" }}>
       <Grid

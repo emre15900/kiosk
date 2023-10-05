@@ -77,7 +77,7 @@ const amounts: readonly amountButton[] = [
   },
 ];
 
-export default function PinStepThree() {
+export default function PinStepFour() {
   const [active, setActive] = useState(1);
 
   const handleAmount = (id: any) => {
@@ -264,15 +264,36 @@ export default function PinStepThree() {
           </Grid>
           <Grid item xs={12} sm={12} md={4}>
             <Typography variant="h4" sx={{ color: "#444094", fontWeight: 100 }}>
-              Fast Cash
+              Get Cash
             </Typography>
             <Grid>
-              <Typography
-                variant="h6"
-                sx={{ color: "#444094", fontWeight: 100, mb: 1 }}
-              >
-                Currency
-              </Typography>
+              <FormControl sx={{ ml: "-5px" }}>
+                <OutlinedInput
+                  sx={{
+                    m: 1,
+                    width: "50ch",
+                    borderRadius: "30px",
+                    borderColor: "#444094",
+                    "& .MuiOutlinedInput-root": {
+                      borderRadius: "30px",
+                      color: "#444094",
+                    },
+                    "& .MuiOutlinedInput-notchedOutline": {
+                      borderColor: "#444094",
+                    },
+                  }}
+                  endAdornment={
+                    <InputAdornment position="end">
+                      <Typography sx={{ color: "#444094", cursor: "pointer" }}>
+                        Max
+                      </Typography>
+                    </InputAdornment>
+                  }
+                  type="number"
+                  id="outlined-basic"
+                  placeholder="Choose Currency"
+                />
+              </FormControl>
               <FormControl sx={{ ml: "-5px" }}>
                 <OutlinedInput
                   sx={{
@@ -300,13 +321,7 @@ export default function PinStepThree() {
                   placeholder="Enter amount"
                 />
               </FormControl>
-              <Typography
-                variant="h6"
-                sx={{ color: "#444094", fontWeight: 100, mb: 1, mt: 2 }}
-              >
-                Amount
-              </Typography>
-              <Grid sx={{maxWidth: 450}}>
+              <Grid sx={{ maxWidth: 450 }}>
                 <Grid container spacing={2}>
                   {amounts.map((amount: any) => {
                     return (
@@ -339,7 +354,14 @@ export default function PinStepThree() {
                   })}
                 </Grid>
               </Grid>
-              <Grid sx={{ mt: 5, display: "flex", alignItems: "center", justifyContent: "center"}}>
+              <Grid
+                sx={{
+                  mt: 5,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <PyButton title="Submit" padding="10px 6rem" />
               </Grid>
             </Grid>
