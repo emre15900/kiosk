@@ -1,4 +1,12 @@
-import { Grid, Card, Typography } from "@mui/material";
+import {
+  Grid,
+  Card,
+  Typography,
+  FormControl,
+  TextField,
+  OutlinedInput,
+  InputAdornment,
+} from "@mui/material";
 import Link from "next/link";
 
 interface ButtonProps {
@@ -114,16 +122,141 @@ export default function Home() {
             justifyContent: "center",
             boxShadow: "none",
             gap: "20px",
+            minWidth: "360px",
           }}
         >
           <Typography variant="h4" sx={{ color: "#444094", fontWeight: 100 }}>
             Hello <strong>Hasan</strong>
           </Typography>
+          <Grid sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
+            <Grid sx={{ display: "flex", gap: "10px" }}>
+              <Grid sx={{ width: "25px" }}>
+                <img
+                  src="/images/us-flag.png"
+                  alt="img"
+                  width="100%"
+                  style={{ borderRadius: "30px" }}
+                />
+              </Grid>
+              <Grid
+                sx={{
+                  display: "flex",
+                  gap: "5px",
+                  flexDirection: "column",
+                }}
+              >
+                <Typography variant="subtitle1" sx={{ color: "#8F7DE4" }}>
+                  Total Balance
+                </Typography>
+                <Typography
+                  variant="h4"
+                  sx={{ color: "#444094", fontWeight: 400 }}
+                >
+                  $ 20, 345. 56
+                </Typography>
+              </Grid>
+            </Grid>
+            <Grid sx={{ display: "flex", gap: "10px" }}>
+              <Grid sx={{ width: "25px" }}>
+                <img
+                  src="/images/eu-flag.png"
+                  alt="img"
+                  width="100%"
+                  style={{ borderRadius: "30px" }}
+                />
+              </Grid>
+              <Grid
+                sx={{
+                  display: "flex",
+                  gap: "5px",
+                  flexDirection: "column",
+                }}
+              >
+                <Typography variant="subtitle1" sx={{ color: "#8F7DE4" }}>
+                  Total Balance
+                </Typography>
+                <Typography
+                  variant="h4"
+                  sx={{ color: "#444094", fontWeight: 400 }}
+                >
+                  € 20, 345. 56
+                </Typography>
+              </Grid>
+            </Grid>
+            <Grid sx={{ display: "flex", gap: "10px" }}>
+              <Grid sx={{ width: "25px" }}>
+                <img
+                  src="/images/russian-flag.png"
+                  alt="img"
+                  width="100%"
+                  style={{ borderRadius: "30px" }}
+                />
+              </Grid>
+              <Grid
+                sx={{
+                  display: "flex",
+                  gap: "5px",
+                  flexDirection: "column",
+                }}
+              >
+                <Typography variant="subtitle1" sx={{ color: "#8F7DE4" }}>
+                  Total Balance
+                </Typography>
+                <Typography
+                  variant="h4"
+                  sx={{ color: "#444094", fontWeight: 400 }}
+                >
+                  ₽ 1, 345. 56
+                </Typography>
+              </Grid>
+            </Grid>
+            <Typography
+              variant="subtitle1"
+              sx={{ color: "#8F7DE4", cursor: "pointerƒ" }}
+            >
+              Show all
+            </Typography>
+          </Grid>
         </Card>
         <Grid>
           <Typography variant="h4" sx={{ color: "#444094", fontWeight: 100 }}>
             Fast Cash
           </Typography>
+          <Grid sx={{ mt: 3 }}>
+            <Typography
+              variant="h6"
+              sx={{ color: "#444094", fontWeight: 100, mb: 1 }}
+            >
+              Currency
+            </Typography>
+            <FormControl sx={{ml: "-5px"}}>
+              <OutlinedInput
+                sx={{
+                  m: 1,
+                  width: "35ch",
+                  borderRadius: "30px",
+                  borderColor: "#444094",
+                  "& .MuiOutlinedInput-root": {
+                    borderRadius: "30px",
+                    color: "#444094",
+                  },
+                  "& .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#444094",
+                  },
+                }}
+                endAdornment={
+                  <InputAdornment position="end">
+                    <Typography sx={{ color: "#444094", cursor: "pointer" }}>
+                      Max
+                    </Typography>
+                  </InputAdornment>
+                }
+                type="number"
+                id="outlined-basic"
+                placeholder="Enter amount"
+              />
+            </FormControl>
+          </Grid>
         </Grid>
       </Grid>
     </Grid>
