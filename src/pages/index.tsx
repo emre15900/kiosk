@@ -60,7 +60,6 @@ export default function Home() {
   buttons.forEach((button, index) => {
     currentRow.push(button);
 
-    // Her birinci satırda 3 kart, ikinci satırda 4 kart olacak şekilde kontrol ediyoruz
     if ((index + 1) % 7 === 0 || index === buttons.length - 1) {
       rows.push(currentRow);
       currentRow = [];
