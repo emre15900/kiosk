@@ -5,21 +5,18 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { Typography } from "@mui/material";
 
 export default function SelectMoney() {
-  const [age, setAge] = useState("");
+  const [money, setMoney] = useState("usd");
 
   const handleChange = (event: SelectChangeEvent) => {
-    setAge(event.target.value as string);
+    setMoney(event.target.value as string);
   };
 
   return (
     <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Age</InputLabel>
         <Select
-          labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={age}
-          label="Age"
+          value={money}
           onChange={handleChange}
           sx={{
             borderRadius: "30px",
@@ -41,10 +38,10 @@ export default function SelectMoney() {
                 width={22}
                 style={{ borderRadius: "30px" }}
               />
-              <Typography>USD</Typography>
+              <Typography>USD ($)</Typography>
             </Grid>
           </MenuItem>
-          <MenuItem value={"euro"}>
+          <MenuItem value={"eur"}>
             <Grid sx={{ display: "flex", alignItems: "center", gap: "5px" }}>
               <img
                 src="/images/eu-flag.png"
@@ -52,10 +49,10 @@ export default function SelectMoney() {
                 width={22}
                 style={{ borderRadius: "30px" }}
               />
-              <Typography>EURO</Typography>
+              <Typography>EUR (€)</Typography>
             </Grid>
           </MenuItem>
-          <MenuItem value={"rubble"}>
+          <MenuItem value={"rub"}>
             <Grid sx={{ display: "flex", alignItems: "center", gap: "5px" }}>
               <img
                 src="/images/russian-flag.png"
@@ -63,7 +60,7 @@ export default function SelectMoney() {
                 width={22}
                 style={{ borderRadius: "30px" }}
               />
-              <Typography>EURO</Typography>
+              <Typography>RUB (₽)</Typography>
             </Grid>
           </MenuItem>
         </Select>
