@@ -12,7 +12,6 @@ function Header() {
 
   const updateTime = () => {
     const time = new Date().toLocaleTimeString();
-    console.log("updateTime", time);
 
     setCurrentTime(time);
   };
