@@ -1,9 +1,59 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Grid, Card, Typography } from "@mui/material";
 import Link from "next/link";
 import LanguageSelector from "@/components/select-language";
 
 function Header() {
+  // ** Local Time
+  const d = new Date();
+
+  const time = new Date().toLocaleTimeString();
+  const [currentTime, setCurrentTime] = useState(time);
+
+  const updateTime = () => {
+    const time = new Date().toLocaleTimeString();
+    console.log("updateTime", time);
+
+    setCurrentTime(time);
+  };
+
+  setInterval(() => {
+    updateTime();
+  }, 1000);
+
+  const daysOfWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  const monthsOfYear = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  const day = d.getDay();
+  const month = d.getMonth();
+  const year = d.getFullYear();
+
+  const dayName = daysOfWeek[day];
+  const monthName = monthsOfYear[month];
+  const lastTwoDigitsOfYear = year.toString().slice(-2);
+
   return (
     <Grid
       sx={{
@@ -45,12 +95,12 @@ function Header() {
         <Typography
           sx={{ color: "#444094", fontSize: "40px", fontWeight: 100 }}
         >
-          13:30
+          {currentTime}
         </Typography>
         <Typography
           sx={{ color: "#444094", fontSize: "18px", fontWeight: 100 }}
         >
-          Wednesday, December 21
+          {dayName}, {monthName} {lastTwoDigitsOfYear}
         </Typography>
       </Grid>
       <Grid>

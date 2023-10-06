@@ -262,7 +262,7 @@ export default function PinStepThree() {
               </Grid>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={12} md={4}>
+          <Grid item xs={12} sm={12} md={6}>
             <Typography variant="h4" sx={{ color: "#444094", fontWeight: 100 }}>
               Fast Cash
             </Typography>
@@ -306,7 +306,7 @@ export default function PinStepThree() {
               >
                 Amount
               </Typography>
-              <Grid sx={{maxWidth: 450}}>
+              <Grid >
                 <Grid container spacing={2}>
                   {amounts.map((amount: any) => {
                     return (
@@ -323,6 +323,7 @@ export default function PinStepThree() {
                             textAlign: "center",
                             alignItems: "center",
                             cursor: "pointer",
+                            width: "100%"
                           }}
                         >
                           <Typography
@@ -339,7 +340,14 @@ export default function PinStepThree() {
                   })}
                 </Grid>
               </Grid>
-              <Grid sx={{ mt: 5, display: "flex", alignItems: "center", justifyContent: "center"}}>
+              <Grid
+                sx={{
+                  mt: 5,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <PyButton title="Submit" padding="10px 6rem" />
               </Grid>
             </Grid>
