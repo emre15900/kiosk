@@ -10,7 +10,8 @@ import {
   Input,
   InputAdornment,
 } from "@mui/material";
-import SelectMoney from "@/components/select-money";
+
+import TelInput from "@/components/tel-input";
 
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import PyButton from "@/components/py-button";
@@ -92,6 +93,12 @@ function SendMoneyStepTwo() {
 
   const handleChangePerson = (event: SelectChangeEvent) => {
     setPerson(event.target.value as string);
+  };
+
+  const [gender, setGender] = useState("");
+
+  const handleChangeGender = (event: SelectChangeEvent) => {
+    setGender(event.target.value as string);
   };
 
   return (
@@ -343,21 +350,45 @@ function SendMoneyStepTwo() {
             />
           </FormControl>
         </Grid>
-        <Grid>
-            
+        <Grid sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">Gender</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={gender}
+              label="Gender"
+              onChange={handleChangeGender}
+              sx={{
+                borderRadius: "30px",
+                borderColor: "#444094",
+                "& .MuiOutlinedInput-root": {
+                  borderRadius: "30px",
+                  color: "#444094",
+                },
+                "& .MuiOutlinedInput-notchedOutline": {
+                  borderColor: "#444094",
+                },
+              }}
+            >
+              <MenuItem value={10}>Male</MenuItem>
+              <MenuItem value={20}>Female</MenuItem>
+            </Select>
+          </FormControl>
+          <Grid sx={{ width: "100%" }}>
+            <TelInput />
+          </Grid>
         </Grid>
         <Grid
-          sx={{ mt: 4, display: "flex", alignItems: "center", gap: "10px" }}
+          sx={{ mt: 1, display: "flex", alignItems: "center", gap: "10px" }}
         >
           <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">
-              Choose payout option
-            </InputLabel>
+            <InputLabel id="demo-simple-select-label">Relatioship</InputLabel>
             <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
               value={option}
-              label="Choose payout option"
+              label="Relatioship"
               onChange={handleChangeOption}
               sx={{
                 borderRadius: "30px",
@@ -371,21 +402,12 @@ function SendMoneyStepTwo() {
                 },
               }}
             >
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
+              <MenuItem value={10}>Relatioship 1</MenuItem>
+              <MenuItem value={20}>Relatioship 2</MenuItem>
             </Select>
           </FormControl>
           <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">
-              Choose payout branch
-            </InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              value={branch}
-              label="Choose payout branch"
-              onChange={handleChangeBranch}
+            <TextField
               sx={{
                 borderRadius: "30px",
                 borderColor: "#444094",
@@ -397,58 +419,73 @@ function SendMoneyStepTwo() {
                   borderColor: "#444094",
                 },
               }}
-            >
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
-            </Select>
+              id="outlined-basic"
+              label="Bank account number / IBAN"
+              variant="outlined"
+            />
           </FormControl>
         </Grid>
         <Grid
-          sx={{
-            background: "#444094",
-            borderRadius: "30px",
-            padding: "12px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            mt: 4,
-          }}
+          sx={{ mt: 1, display: "flex", alignItems: "center", gap: "10px" }}
         >
-          <Typography sx={{ color: "#ffffff" }}>0 USD = TRY</Typography>
+          <FormControl fullWidth>
+            <TextField
+              sx={{
+                borderRadius: "30px",
+                borderColor: "#444094",
+                "& .MuiOutlinedInput-root": {
+                  borderRadius: "30px",
+                  color: "#444094",
+                },
+                "& .MuiOutlinedInput-notchedOutline": {
+                  borderColor: "#444094",
+                },
+              }}
+              id="outlined-basic"
+              label="Bank name"
+              variant="outlined"
+            />
+          </FormControl>
+          <FormControl fullWidth>
+            <TextField
+              sx={{
+                borderRadius: "30px",
+                borderColor: "#444094",
+                "& .MuiOutlinedInput-root": {
+                  borderRadius: "30px",
+                  color: "#444094",
+                },
+                "& .MuiOutlinedInput-notchedOutline": {
+                  borderColor: "#444094",
+                },
+              }}
+              id="outlined-basic"
+              label="SWIFT code"
+              variant="outlined"
+            />
+          </FormControl>
         </Grid>
-        <Grid sx={{ mt: 4 }}>
-          <Grid
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              gap: "10px",
-            }}
-          >
-            <Typography sx={{ color: "#000000", fontWeight: 200 }}>
-              Payable amount:
-            </Typography>
-            <Typography sx={{ color: "#000000", fontWeight: 200 }}>
-              500 USD
-            </Typography>
-          </Grid>
-          <Grid
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              gap: "10px",
-              mt: 3,
-            }}
-          >
-            <Typography sx={{ color: "#000000", fontWeight: 200 }}>
-              Transfer fee:
-            </Typography>
-            <Typography sx={{ color: "#000000", fontWeight: 200 }}>
-              5 USD
-            </Typography>
-          </Grid>
+        <Grid
+          sx={{ mt: 1, display: "flex", alignItems: "center", gap: "10px" }}
+        >
+          <FormControl fullWidth>
+            <TextField
+              sx={{
+                borderRadius: "30px",
+                borderColor: "#444094",
+                "& .MuiOutlinedInput-root": {
+                  borderRadius: "30px",
+                  color: "#444094",
+                },
+                "& .MuiOutlinedInput-notchedOutline": {
+                  borderColor: "#444094",
+                },
+              }}
+              id="outlined-basic"
+              label="Bank address"
+              variant="outlined"
+            />
+          </FormControl>
         </Grid>
         <Link href="/sendmoney/step-2">
           <Grid
@@ -459,7 +496,7 @@ function SendMoneyStepTwo() {
               mt: 4,
             }}
           >
-            <PyButton title="Continues" padding="10px 5rem" />
+            <PyButton title="Continues proceed" padding="10px 10rem" />
           </Grid>
         </Link>
       </Card>
