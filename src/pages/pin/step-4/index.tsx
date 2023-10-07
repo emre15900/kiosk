@@ -328,7 +328,6 @@ export default function PinStepFour() {
                       <Grid key={amount.id} item xs={6} sm={4} md={4}>
                         <Grid
                           onClick={() => handleAmount(amount.id)}
-                          key={amount.id}
                           sx={{
                             border: "1px solid #444094",
                             background:
