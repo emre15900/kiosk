@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Card,
   Grid,
@@ -12,6 +12,8 @@ import SelectMoney from "@/components/select-money";
 
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import PyButton from "@/components/py-button";
+
+import Link from "next/link";
 
 const buttons = [
   {
@@ -27,16 +29,22 @@ const buttons = [
 ];
 
 function SendMoney() {
-  const [active, setActive] = React.useState(1);
+  const [active, setActive] = useState(1);
 
   const handleClick = (id: number) => {
     setActive(id);
   };
 
-  const [age, setAge] = React.useState("");
+  const [option, setOption] = useState("");
 
-  const handleChange = (event: SelectChangeEvent) => {
-    setAge(event.target.value as string);
+  const handleChangeOption = (event: SelectChangeEvent) => {
+    setOption(event.target.value as string);
+  };
+
+  const [branch, setBranch] = useState("");
+
+  const handleChangeBranch = (event: SelectChangeEvent) => {
+    setBranch(event.target.value as string);
   };
 
   return (
@@ -169,9 +177,9 @@ function SendMoney() {
             <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
-              value={age}
+              value={option}
               label="Choose payout option"
-              onChange={handleChange}
+              onChange={handleChangeOption}
               sx={{
                 borderRadius: "30px",
                 borderColor: "#444094",
@@ -196,9 +204,9 @@ function SendMoney() {
             <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
-              value={age}
+              value={branch}
               label="Choose payout branch"
-              onChange={handleChange}
+              onChange={handleChangeBranch}
               sx={{
                 borderRadius: "30px",
                 borderColor: "#444094",
@@ -263,16 +271,18 @@ function SendMoney() {
             </Typography>
           </Grid>
         </Grid>
-        <Grid
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            mt: 4,
-          }}
-        >
-          <PyButton title="Continues" padding="10px 5rem" />
-        </Grid>
+        <Link href="/sendmoney/step-2">
+          <Grid
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              mt: 4,
+            }}
+          >
+            <PyButton title="Continues" padding="10px 5rem" />
+          </Grid>
+        </Link>
       </Card>
     </Grid>
   );
