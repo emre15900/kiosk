@@ -166,7 +166,7 @@ export default function Home() {
             Send Money Step 2
           </Typography>
         </Link>
-        <Link href="/sendmoney/step-3">
+        {/* <Link href="/sendmoney/step-3">
           <Typography
             variant="h6"
             sx={{
@@ -189,7 +189,7 @@ export default function Home() {
           >
             Send Money Step 4
           </Typography>
-        </Link>
+        </Link> */}
       </Grid>
       <Grid container spacing={2}>
         {rows?.map((row, rowIndex) => (
