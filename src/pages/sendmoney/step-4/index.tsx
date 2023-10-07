@@ -11,27 +11,10 @@ import {
   InputAdornment,
 } from "@mui/material";
 
-import TelInput from "@/components/tel-input";
-
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import PyButton from "@/components/py-button";
 
 import Link from "next/link";
-
-const buttons = [
-  {
-    id: 1,
-    currency: "Debit card",
-    active: "/images/active-card.png",
-    disable: "/images/disable-card.png",
-  },
-  {
-    id: 2,
-    currency: "Credit card",
-    active: "/images/active-card.png",
-    disable: "/images/disable-card.png",
-  },
-];
 
 const items = [
   {
@@ -245,7 +228,7 @@ function SendMoneyStepFour() {
             >
               {secondItems.map((item: any) => {
                 return (
-                  <MenuItem value={item.id}>
+                  <MenuItem key={item.id} value={item.id}>
                     <Grid
                       sx={{
                         display: "flex",
@@ -324,7 +307,7 @@ function SendMoneyStepFour() {
             >
               {payments.map((item: any) => {
                 return (
-                  <MenuItem value={item.id}>
+                  <MenuItem key={item.id} value={item.id}>
                     <Grid
                       sx={{
                         display: "flex",
