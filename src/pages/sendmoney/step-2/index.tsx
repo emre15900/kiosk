@@ -7,6 +7,8 @@ import {
   FormControl,
   InputLabel,
   MenuItem,
+  Input,
+  InputAdornment,
 } from "@mui/material";
 import SelectMoney from "@/components/select-money";
 
@@ -179,6 +181,58 @@ function SendMoneyStepTwo() {
               })}
             </Select>
           </FormControl>
+        </Grid>
+        <Grid
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            borderRadius: "30px",
+            background: "#ffffff",
+            padding: "20px 25px",
+            mt: 3,
+          }}
+        >
+          <Typography sx={{ color: "#444094" }}>
+            Who are you sending money to?
+          </Typography>
+          <Typography sx={{ color: "#8F7DE4", fontWeight: 100 }}>
+            You can select your beneficiary from below list or add new
+          </Typography>
+          <Grid>
+            <FormControl fullWidth>
+              <TextField
+                fullWidth
+                id="outlined-start-adornment"
+                size="small"
+                sx={{
+                  mt: 1,
+                  borderRadius: "30px",
+                  borderColor: "#444094",
+                  "& .MuiOutlinedInput-root": {
+                    borderRadius: "30px",
+                    color: "#444094",
+                  },
+                  "& .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#444094",
+                  },
+                }}
+                placeholder="Search"
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <Grid sx={{ width: "20px" }}>
+                        <img
+                          src="/images/search.png"
+                          alt="search"
+                          width="100%"
+                        />
+                      </Grid>
+                    </InputAdornment>
+                  ),
+                }}
+              />
+            </FormControl>
+          </Grid>
         </Grid>
         <Typography
           sx={{
