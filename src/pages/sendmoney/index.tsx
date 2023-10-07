@@ -144,8 +144,8 @@ function SendMoney() {
           {buttons.map((button) => {
             return (
               <Grid
-                onClick={() => handleClick(button.id)}
                 key={button.id}
+                onClick={() => handleClick(button.id)}
                 sx={{
                   display: "flex",
                   alignItems: "center",

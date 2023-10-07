@@ -325,7 +325,7 @@ export default function PinStepFour() {
                 <Grid container spacing={2}>
                   {amounts.map((amount: any) => {
                     return (
-                      <Grid item xs={6} sm={4} md={4}>
+                      <Grid key={amount.id} item xs={6} sm={4} md={4}>
                         <Grid
                           onClick={() => handleAmount(amount.id)}
                           key={amount.id}
