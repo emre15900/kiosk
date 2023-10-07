@@ -94,7 +94,7 @@ export default function PinStepFour() {
           gap: "30px",
         }}
       >
-        {buttons.map((button) => {
+        {buttons.map((button: any) => {
           return (
             <Grid key={button.id}>
               <Link href={button.link}>
