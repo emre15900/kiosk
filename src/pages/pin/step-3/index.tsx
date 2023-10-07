@@ -306,14 +306,13 @@ export default function PinStepThree() {
               >
                 Amount
               </Typography>
-              <Grid >
+              <Grid>
                 <Grid container spacing={2}>
                   {amounts.map((amount: any) => {
                     return (
-                      <Grid item xs={6} sm={4} md={4}>
+                      <Grid key={amount.id} item xs={6} sm={4} md={4}>
                         <Grid
                           onClick={() => handleAmount(amount.id)}
-                          key={amount.id}
                           sx={{
                             border: "1px solid #444094",
                             background:
@@ -323,7 +322,7 @@ export default function PinStepThree() {
                             textAlign: "center",
                             alignItems: "center",
                             cursor: "pointer",
-                            width: "100%"
+                            width: "100%",
                           }}
                         >
                           <Typography

@@ -149,7 +149,7 @@ function SendMoneyStepFour() {
             >
               {items.map((item: any) => {
                 return (
-                  <MenuItem value={item.id}>
+                  <MenuItem key={item.id} value={item.id}>
                     <Grid
                       sx={{
                         display: "flex",
