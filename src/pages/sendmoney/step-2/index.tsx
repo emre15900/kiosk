@@ -20,13 +20,31 @@ import Link from "next/link";
 const buttons = [
   {
     id: 1,
-    name: "Cash Pick Up",
-    img: "/images/cash-pick-up.png",
+    currency: "USD",
+    name: "Zahid Hussain",
+    location: "USA Florida",
+    img: "/images/us-flag.png",
   },
   {
     id: 2,
-    name: "Bank Transfer",
-    img: "/images/bank-transfer.png",
+    currency: "USD",
+    name: "Zahid Hussain",
+    location: "USA Florida",
+    img: "/images/us-flag.png",
+  },
+  {
+    id: 3,
+    currency: "USD",
+    name: "Zahid Hussain",
+    location: "USA Florida",
+    img: "/images/us-flag.png",
+  },
+  {
+    id: 4,
+    currency: "USD",
+    name: "Zahid Hussain",
+    location: "USA Florida",
+    img: "/images/us-flag.png",
   },
 ];
 
@@ -234,17 +252,6 @@ function SendMoneyStepTwo() {
             </FormControl>
           </Grid>
         </Grid>
-        <Typography
-          sx={{
-            color: "#000000",
-            fontWeight: 300,
-            fontSize: "20px",
-            textAlign: "center",
-            mt: 4,
-          }}
-        >
-          Choose a payment method
-        </Typography>
         <Grid
           sx={{ display: "flex", alignItems: "center", gap: "20px", mt: 4 }}
         >
@@ -256,23 +263,88 @@ function SendMoneyStepTwo() {
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  gap: "10px",
                   background: "#ffffff",
                   borderRadius: "40px",
                   padding: "15px 20px",
                   border: active === button.id ? "1px solid #66FF84" : "",
                   cursor: "pointer",
+                  flexDirection: "column",
                 }}
               >
-                <Grid sx={{ width: "80px" }}>
-                  <img src={button.img} alt="img" width="100%" />
-                </Grid>
                 <Typography variant="h6" sx={{ color: "#444094", mt: 1 }}>
+                  {button.currency}
+                </Typography>
+                <Typography
+                  variant="h6"
+                  sx={{ color: "#9FAAB2", fontWeight: 100 }}
+                >
                   {button.name}
                 </Typography>
+                <Grid sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                  <Grid sx={{ width: "20px" }}>
+                    <img src={button.img} alt="img" width="100%" />
+                  </Grid>
+                  <Typography variant="subtitle1" sx={{ color: "#9FAAB2" }}>
+                    {button.location}
+                  </Typography>
+                </Grid>
               </Grid>
             );
           })}
+        </Grid>
+        <Typography
+          variant="subtitle1"
+          sx={{ color: "#444094", textAlign: "end", mt: 2, cursor: "pointer" }}
+        >
+          Clear and add new
+        </Typography>
+        <Typography variant="h6" sx={{ color: "#444094", mt: 2 }}>
+          Create new recipients, & continue your process
+        </Typography>
+        <Grid
+          sx={{ display: "flex", alignItems: "center", gap: "10px", mt: 4 }}
+        >
+          <FormControl fullWidth>
+            <TextField
+              sx={{
+                pb: 1,
+                borderRadius: "30px",
+                borderColor: "#444094",
+                "& .MuiOutlinedInput-root": {
+                  borderRadius: "30px",
+                  color: "#444094",
+                },
+                "& .MuiOutlinedInput-notchedOutline": {
+                  borderColor: "#444094",
+                },
+              }}
+              id="outlined-basic"
+              label="First name"
+              variant="outlined"
+            />
+          </FormControl>
+          <FormControl fullWidth>
+            <TextField
+              sx={{
+                pb: 1,
+                borderRadius: "30px",
+                borderColor: "#444094",
+                "& .MuiOutlinedInput-root": {
+                  borderRadius: "30px",
+                  color: "#444094",
+                },
+                "& .MuiOutlinedInput-notchedOutline": {
+                  borderColor: "#444094",
+                },
+              }}
+              id="outlined-basic"
+              label="Last name"
+              variant="outlined"
+            />
+          </FormControl>
+        </Grid>
+        <Grid>
+            
         </Grid>
         <Grid
           sx={{ mt: 4, display: "flex", alignItems: "center", gap: "10px" }}
