@@ -68,6 +68,129 @@ export default function Home() {
 
   return (
     <Grid sx={{ padding: "40px" }}>
+      <Grid sx={{ mb: 5, display: "flex", alignItems: "center", gap: "10px" }}>
+        <Typography variant="h5">PAGES:</Typography>
+        <Link href="/">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+            Home
+          </Typography>
+        </Link>
+        <Link href="/pin">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+            Pin
+          </Typography>
+        </Link>
+        <Link href="/pin/step-2">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+            Pin Step 2
+          </Typography>
+        </Link>
+        <Link href="/pin/step-3">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+            Pin Step 3
+          </Typography>
+        </Link>
+        <Link href="/pin/step-4">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+            Pin Step 4
+          </Typography>
+        </Link>
+        <Link href="/password">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+            Password
+          </Typography>
+        </Link>
+        <Link href="/sendmoney">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+            Send Money
+          </Typography>
+        </Link>
+        <Link href="/sendmoney/step-2">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+            Send Money Step 2
+          </Typography>
+        </Link>
+        <Link href="/sendmoney/step-3">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+            Send Money Step 3
+          </Typography>
+        </Link>
+        <Link href="/sendmoney/step-4">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+            Send Money Step 4
+          </Typography>
+        </Link>
+      </Grid>
       <Grid container spacing={2}>
         {rows?.map((row, rowIndex) => (
           <Grid key={rowIndex} container justifyContent="center" spacing={2}>
