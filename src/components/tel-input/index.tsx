@@ -21,6 +21,7 @@ function TelInput() {
       flagSize="medium"
       value={value}
       onChange={handleChange}
+      placeholder="Phone number"
       sx={{
         width: "100%",
         borderRadius: "30px",
