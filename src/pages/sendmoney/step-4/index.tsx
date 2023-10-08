@@ -98,6 +98,12 @@ function SendMoneyStepFour() {
     setPayment(event.target.value as string);
   };
 
+  const [purpose, setPurpose] = useState("");
+
+  const handleChangePurpose = (event: SelectChangeEvent) => {
+    setPurpose(event.target.value as string);
+  };
+
   return (
     <Grid
       sx={{
@@ -364,6 +370,300 @@ function SendMoneyStepFour() {
           </FormControl>
         </Grid>
 
+        <Grid sx={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+          <Grid>
+            <Grid
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                mt: 3,
+              }}
+            >
+              <Typography sx={{ color: "#8F7DE4" }}>From Sending</Typography>
+              <Grid
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
+                  cursor: "pointer",
+                }}
+              >
+                <Grid sx={{ width: "20px" }}>
+                  <img src="/images/edit.png" width="100%" alt="edit" />
+                </Grid>
+                <Typography sx={{ color: "#444094" }}>Edit</Typography>
+              </Grid>
+            </Grid>
+            <Typography sx={{ color: "#444094", fontSize: 28, mt: 1 }}>
+              160 USD
+            </Typography>
+            <Grid
+              sx={{
+                border: "1px solid #8F7DE4",
+                background: "#ffffff",
+                padding: "20px",
+                borderRadius: "30px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "10px",
+                mt: 1,
+              }}
+            >
+              <Grid
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  gap: "20px",
+                }}
+              >
+                <Grid sx={{ display: "flex", flexDirection: "column" }}>
+                  <Typography sx={{ color: "#8F7DE4", fontWeight: 200 }}>
+                    Name
+                  </Typography>
+                  <Typography sx={{ color: "#444094", fontWeight: 200 }}>
+                    Shakeel Hussain
+                  </Typography>
+                </Grid>
+                <Grid sx={{ display: "flex", flexDirection: "column" }}>
+                  <Typography sx={{ color: "#8F7DE4", fontWeight: 200 }}>
+                    Sending amount
+                  </Typography>
+                  <Typography sx={{ color: "#444094", fontWeight: 200 }}>
+                    150.00 USD
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  gap: "20px",
+                }}
+              >
+                <Grid sx={{ display: "flex", flexDirection: "column" }}>
+                  <Typography sx={{ color: "#8F7DE4", fontWeight: 200 }}>
+                    Phone number
+                  </Typography>
+                  <Typography sx={{ color: "#444094", fontWeight: 200 }}>
+                    +983745657583482388
+                  </Typography>
+                </Grid>
+                <Grid sx={{ display: "flex", flexDirection: "column" }}>
+                  <Typography sx={{ color: "#8F7DE4", fontWeight: 200 }}>
+                    Total due amount
+                  </Typography>
+                  <Typography sx={{ color: "#444094", fontWeight: 200 }}>
+                    150.00 USD
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  gap: "20px",
+                }}
+              >
+                <Grid sx={{ display: "flex", flexDirection: "column" }}>
+                  <Typography sx={{ color: "#8F7DE4", fontWeight: 200 }}>
+                    Address
+                  </Typography>
+                  <Typography sx={{ color: "#444094", fontWeight: 200 }}>
+                    12 Helmet Row, London, United Kingdom, <br /> EC1V 3QJ.
+                  </Typography>
+                </Grid>
+                <Grid sx={{ display: "flex", flexDirection: "column" }}>
+                  <Typography sx={{ color: "#8F7DE4", fontWeight: 200 }}>
+                    Recipients amount gets
+                  </Typography>
+                  <Typography sx={{ color: "#444094", fontWeight: 200 }}>
+                    2384857858.23 PKR
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid>
+            <Grid
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                mt: 3,
+              }}
+            >
+              <Typography sx={{ color: "#8F7DE4" }}>To receiver</Typography>
+              <Grid
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "5px",
+                  cursor: "pointer",
+                }}
+              >
+                <Grid sx={{ width: "20px" }}>
+                  <img src="/images/edit.png" width="100%" alt="edit" />
+                </Grid>
+                <Typography sx={{ color: "#444094" }}>Edit</Typography>
+              </Grid>
+            </Grid>
+            <Typography sx={{ color: "#444094", fontSize: 28, mt: 1 }}>
+              23456.55 USD
+            </Typography>
+            <Grid
+              sx={{
+                border: "1px solid #8F7DE4",
+                background: "#ffffff",
+                padding: "20px",
+                borderRadius: "30px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "10px",
+                mt: 1,
+              }}
+            >
+              <Grid
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  gap: "20px",
+                }}
+              >
+                <Grid sx={{ display: "flex", flexDirection: "column" }}>
+                  <Typography sx={{ color: "#8F7DE4", fontWeight: 200 }}>
+                    Name
+                  </Typography>
+                  <Typography sx={{ color: "#444094", fontWeight: 200 }}>
+                    Shakeel Hussain
+                  </Typography>
+                </Grid>
+                <Grid sx={{ display: "flex", flexDirection: "column" }}>
+                  <Typography sx={{ color: "#8F7DE4", fontWeight: 200 }}>
+                    Sending amount
+                  </Typography>
+                  <Typography sx={{ color: "#444094", fontWeight: 200 }}>
+                    150.00 USD
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  gap: "20px",
+                }}
+              >
+                <Grid sx={{ display: "flex", flexDirection: "column" }}>
+                  <Typography sx={{ color: "#8F7DE4", fontWeight: 200 }}>
+                    Phone number
+                  </Typography>
+                  <Typography sx={{ color: "#444094", fontWeight: 200 }}>
+                    +983745657583482388
+                  </Typography>
+                </Grid>
+                <Grid sx={{ display: "flex", flexDirection: "column" }}>
+                  <Typography sx={{ color: "#8F7DE4", fontWeight: 200 }}>
+                    Total due amount
+                  </Typography>
+                  <Typography sx={{ color: "#444094", fontWeight: 200 }}>
+                    150.00 USD
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  gap: "20px",
+                }}
+              >
+                <Grid sx={{ display: "flex", flexDirection: "column" }}>
+                  <Typography sx={{ color: "#8F7DE4", fontWeight: 200 }}>
+                    Address
+                  </Typography>
+                  <Typography sx={{ color: "#444094", fontWeight: 200 }}>
+                    12 Helmet Row, London, United Kingdom, <br /> EC1V 3QJ.
+                  </Typography>
+                </Grid>
+                <Grid sx={{ display: "flex", flexDirection: "column" }}>
+                  <Typography sx={{ color: "#8F7DE4", fontWeight: 200 }}>
+                    Recipients amount gets
+                  </Typography>
+                  <Typography sx={{ color: "#444094", fontWeight: 200 }}>
+                    2384857858.23 PKR
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+
+        <Grid
+          sx={{ display: "flex", alignItems: "center", gap: "10px", mt: 5 }}
+        >
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">
+              Choose purpose
+            </InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={purpose}
+              label="Choose purpose"
+              onChange={handleChangePurpose}
+              sx={{
+                borderRadius: "30px",
+                borderColor: "#444094",
+                "& .MuiOutlinedInput-root": {
+                  borderRadius: "30px",
+                  color: "#444094",
+                },
+                "& .MuiOutlinedInput-notchedOutline": {
+                  borderColor: "#444094",
+                },
+              }}
+            >
+              <MenuItem value={10}>Choose purpose 1</MenuItem>
+              <MenuItem value={20}>Choose purpose 2</MenuItem>
+              <MenuItem value={30}>Choose purpose 2</MenuItem>
+            </Select>
+          </FormControl>
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">
+              Choose purpose
+            </InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={purpose}
+              label="Choose purpose"
+              onChange={handleChangePurpose}
+              sx={{
+                borderRadius: "30px",
+                borderColor: "#444094",
+                "& .MuiOutlinedInput-root": {
+                  borderRadius: "30px",
+                  color: "#444094",
+                },
+                "& .MuiOutlinedInput-notchedOutline": {
+                  borderColor: "#444094",
+                },
+              }}
+            >
+              <MenuItem value={10}>Choose purpose 1</MenuItem>
+              <MenuItem value={20}>Choose purpose 2</MenuItem>
+              <MenuItem value={30}>Choose purpose 2</MenuItem>
+            </Select>
+          </FormControl>
+        </Grid>
+
         <Link href="/sendmoney/step-2">
           <Grid
             sx={{
@@ -373,7 +673,7 @@ function SendMoneyStepFour() {
               mt: 4,
             }}
           >
-            <PyButton title="Confirm and proceed" padding="10px 10rem" />
+            <PyButton title="Confirm and proceed" padding="10px 12rem" />
           </Grid>
         </Link>
       </Card>
