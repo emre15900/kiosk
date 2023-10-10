@@ -87,7 +87,7 @@ function Otp() {
             hasan**45@gmail.com
           </span>{" "}
         </Typography>
-        <Grid>
+        <Grid sx={{ mt: 6 }}>
           <Typography
             sx={{ color: "#444094", fontWeight: 300, textAlign: "center" }}
           >
@@ -102,13 +102,55 @@ function Otp() {
               alignItems: "center",
               gap: "10px",
               justifyContent: "space-between",
-              m: 2.5,
+              m: 1,
             }}
           >
-            <Typography sx={{ color: "#CAC9C9ƒ", fontWeight: 300 }}>
+            <Typography
+              sx={{
+                color: "rgba(202, 201, 201, 1)",
+                cursor: "pointer",
+                fontWeight: 300,
+              }}
+            >
               Didn’t recive?
             </Typography>
-            <Typography sx={{ color: "#444094", fontWeight: 300 }}>
+            <Typography
+              sx={{ color: "#444094", cursor: "pointer", fontWeight: 300 }}
+            >
+              Resend code
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid sx={{ mt: 7 }}>
+          <Typography
+            sx={{ color: "#444094", fontWeight: 300, textAlign: "center" }}
+          >
+            E-mail verification code
+          </Typography>
+          <Grid sx={{ mt: 2, mb: 2 }}>
+            <PyOtp />
+          </Grid>
+          <Grid
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              gap: "10px",
+              justifyContent: "space-between",
+              m: 1,
+            }}
+          >
+            <Typography
+              sx={{
+                color: "rgba(202, 201, 201, 1)",
+                cursor: "pointer",
+                fontWeight: 300,
+              }}
+            >
+              Didn’t recive?
+            </Typography>
+            <Typography
+              sx={{ color: "#444094", cursor: "pointer", fontWeight: 300 }}
+            >
               Resend code
             </Typography>
           </Grid>

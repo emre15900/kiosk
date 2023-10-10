@@ -35,3 +35,13 @@
 .hoverButton:hover {
   background: #5b56bd !important;
 }
+
+.ReactInputVerificationCode__item {
+  border-radius: 50% !important;
+  width: 5rem !important;
+  border: 1px solid rgba(68, 64, 148, 1) !important;
+}
+
+.ReactInputVerificationCode__item:focus {
+  border: 3px solid red !important;
+}
