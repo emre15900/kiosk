@@ -529,16 +529,129 @@ function BuySellCrypto() {
           </FormControl>
         </Grid>
 
+        <Grid sx={{ mt: 5 }}>
+          <Grid
+            sx={{
+              height: "1.5px",
+              width: "100%",
+              background: "#444094",
+              mb: 4,
+            }}
+          ></Grid>
+          <Grid
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              gap: "10px",
+            }}
+          >
+            <Typography variant="h6" sx={{ color: "#000000", fontWeight: 500 }}>
+              I want to buy
+            </Typography>
+            <Typography variant="h6" sx={{ color: "#000000", fontWeight: 500 }}>
+              0.02 ETH
+            </Typography>
+          </Grid>
+          <Grid
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              gap: "10px",
+            }}
+          >
+            <Typography
+              variant="subtitle1"
+              sx={{ color: "#000000", fontWeight: 100 }}
+            >
+              Order details
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              sx={{ color: "#000000", fontWeight: 100 }}
+            >
+              €
+            </Typography>
+          </Grid>
+          <Grid
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              gap: "10px",
+            }}
+          >
+            <Typography
+              variant="subtitle1"
+              sx={{ color: "#000000", fontWeight: 100 }}
+            >
+              0.02 ETH @ €144.58
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              sx={{ color: "#000000", fontWeight: 100 }}
+            >
+              €2.33
+            </Typography>
+          </Grid>
+          <Grid
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              gap: "10px",
+            }}
+          >
+            <Typography
+              variant="subtitle1"
+              sx={{ color: "#000000", fontWeight: 100 }}
+            >
+              Fee
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              sx={{ color: "#000000", fontWeight: 100 }}
+            >
+              €0.20
+            </Typography>
+          </Grid>
+          <Grid
+            sx={{
+              height: "1px",
+              width: "100%",
+              background: "#444094",
+              mt: 4,
+              mb: 4,
+            }}
+          ></Grid>
+          <Grid
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              gap: "10px",
+            }}
+          >
+            <Typography variant="h5" sx={{ color: "#000000", fontWeight: 500 }}>
+              Total Cost
+            </Typography>
+            <Typography variant="h5" sx={{ color: "#000000", fontWeight: 500 }}>
+              €2.44
+            </Typography>
+          </Grid>
+        </Grid>
+
         <Link href="/sendmoney/step-2">
           <Grid
             sx={{
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              mt: 4,
+              mt: 8,
             }}
           >
-            <PyButton title="Send" padding="10px 10rem" />
+            <PyButton title="Send" padding="10px 14rem" />
           </Grid>
         </Link>
       </Card>
