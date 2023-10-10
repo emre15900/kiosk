@@ -130,6 +130,39 @@ const crypto = [
   },
 ];
 
+const pays = [
+  {
+    id: 1,
+    name: "Credit Card",
+    type: "Bank Card",
+    description: "Transaction fees 3,6%",
+  },
+  {
+    id: 2,
+    name: "Bank Wire",
+    type: "SEPA",
+    description: "Transaction fees 8,5%",
+  },
+  {
+    id: 3,
+    name: "Bank Wire",
+    type: "SWIFT",
+    description: "Transaction fees 6,5%",
+  },
+  {
+    id: 4,
+    name: "Bank Wire",
+    type: "ACH",
+    description: "Transaction fees 8,5%",
+  },
+  {
+    id: 5,
+    name: "Bank Wire",
+    type: "UK Faster Transfer ( GBP )",
+    description: "Transaction fees 8,5%",
+  },
+];
+
 function BuySellCrypto() {
   const [active, setActive] = useState(1);
 
@@ -207,6 +240,7 @@ function BuySellCrypto() {
                   border: active === button.id ? "1px solid #66FF84" : "",
                   cursor: "pointer",
                   flexDirection: "column",
+                  width: "100%",
                 }}
               >
                 <Grid sx={{ display: "flex", alignItems: "center", gap: 2 }}>
@@ -285,6 +319,103 @@ function BuySellCrypto() {
           >
             <PyButton title="View more" padding="10px 10rem" />
           </Grid>
+        </Grid>
+
+        <Grid>
+          <Typography
+            sx={{
+              color: "#444094",
+              fontWeight: 300,
+              fontSize: "40px",
+              textAlign: "center",
+              mt: 4,
+            }}
+          >
+            How you want to Pay?
+          </Typography>
+          <Grid container spacing={2} justifyContent={"center"} sx={{ mt: 4 }}>
+            {pays.map((button) => {
+              return (
+                <Grid item md={4} lg={4}>
+                  <Grid
+                    onClick={() => handleClick(button.id)}
+                    key={button.id}
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      background: active === button.id ? "#444094" : "#ffffff",
+                      borderRadius: "20px",
+                      padding: "20px",
+                      border: "1px solid #444094",
+                      cursor: "pointer",
+                      flexDirection: "column",
+                      width: "100%",
+                    }}
+                  >
+                    <Grid
+                      sx={{ display: "flex", alignItems: "center", gap: 0.5 }}
+                    >
+                      <Typography
+                        variant="subtitle2"
+                        sx={{
+                          color: active === button.id ? "#ffffff" : "#000000",
+                          mt: 1,
+                          fontWeight: 100,
+                          whiteSpace: "nowrap",
+                        }}
+                      >
+                        {button.name}
+                      </Typography>
+                      <Typography
+                        variant="subtitle2"
+                        sx={{
+                          color: active === button.id ? "#ffffff" : "#444094",
+                          mt: 1,
+                          fontWeight: 100,
+                          whiteSpace: "nowrap",
+                        }}
+                      >
+                        -
+                      </Typography>
+                      <Typography
+                        variant="subtitle2"
+                        sx={{
+                          color: active === button.id ? "#66FF84" : "#444094",
+                          mt: 1,
+                          fontWeight: 100,
+                          whiteSpace: "nowrap",
+                        }}
+                      >
+                        {button.type}
+                      </Typography>
+                    </Grid>
+                    <Typography
+                      variant="subtitle2"
+                      sx={{
+                        color: active === button.id ? "#ffffff" : "#000000",
+                        mt: 1,
+                        fontWeight: 100,
+                        whiteSpace: "nowrap",
+                      }}
+                    >
+                      {button.description}
+                    </Typography>
+                  </Grid>
+                </Grid>
+              );
+            })}
+          </Grid>
+          <Typography
+            variant="subtitle1"
+            sx={{
+              color: "#000000",
+              textAlign: "center",
+              mt: 4,
+              fontWeight: 100,
+            }}
+          >
+            Credit card limit €625 / €2000 EUR
+          </Typography>
         </Grid>
 
         <Typography
