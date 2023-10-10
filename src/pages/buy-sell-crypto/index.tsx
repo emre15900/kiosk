@@ -5,9 +5,6 @@ import {
   Typography,
   TextField,
   FormControl,
-  InputLabel,
-  MenuItem,
-  Input,
   InputAdornment,
 } from "@mui/material";
 
@@ -22,52 +19,114 @@ import SelectMoney from "@/components/select-money";
 const buttons = [
   {
     id: 1,
-    currency: "USD",
-    name: "Zahid Hussain",
-    location: "USA Florida",
-    img: "/images/us-flag.png",
+    name: "I want to buy crypto",
+    activeImg: "/images/iwantactive.png",
+    disableImg: "/images/iwantdisable.png",
   },
   {
     id: 2,
-    currency: "USD",
-    name: "Zahid Hussain",
-    location: "USA Florida",
-    img: "/images/us-flag.png",
-  },
-  {
-    id: 3,
-    currency: "USD",
-    name: "Zahid Hussain",
-    location: "USA Florida",
-    img: "/images/us-flag.png",
-  },
-  {
-    id: 4,
-    currency: "USD",
-    name: "Zahid Hussain",
-    location: "USA Florida",
-    img: "/images/us-flag.png",
+    name: "I want to sell crypto",
+    activeImg: "/images/iselldisable.png",
+    disableImg: "/images/isellactive.png",
   },
 ];
 
-const items = [
+const crypto = [
   {
-    id: "person1",
-    type: "Bank Transfer",
-    country: "Pakistan",
-    amount: "500 USD/1000 EURO",
+    id: 1,
+    name: "btc",
   },
   {
-    id: "person2",
-    type: "Crypto Transfer",
-    country: "England",
-    amount: "500 USD/1000 EURO",
+    id: 2,
+    name: "eth",
   },
   {
-    id: "person3",
-    type: "Card Deposit",
-    country: "Canada",
-    amount: "500 USD/1000 EURO",
+    id: 3,
+    name: "ltc",
+  },
+  {
+    id: 4,
+    name: "xlm",
+  },
+  {
+    id: 5,
+    name: "usdt",
+  },
+  {
+    id: 6,
+    name: "usdc",
+  },
+  {
+    id: 7,
+    name: "busd",
+  },
+  {
+    id: 9,
+    name: "xrp",
+  },
+  {
+    id: 10,
+    name: "sol",
+  },
+  {
+    id: 11,
+    name: "dash",
+  },
+  {
+    id: 12,
+    name: "dot",
+  },
+  {
+    id: 13,
+    name: "matic",
+  },
+  {
+    id: 14,
+    name: "shib",
+  },
+  {
+    id: 15,
+    name: "trx",
+  },
+  {
+    id: 16,
+    name: "uni",
+  },
+  {
+    id: 17,
+    name: "avax",
+  },
+  {
+    id: 18,
+    name: "link",
+  },
+  {
+    id: 19,
+    name: "chz",
+  },
+  {
+    id: 20,
+    name: "ada",
+  },
+  {
+    id: 21,
+    name: "dai",
+  },
+  {
+    id: 22,
+    name: "usdc",
+  },
+  {
+    id: 23,
+    name: "busd",
+  },
+  {
+    id: 24,
+    name: "xrp",
+  },
+  {
+    id: 25,
+    name: "sol",
   },
 ];
 
@@ -142,34 +201,90 @@ function BuySellCrypto() {
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  background: "#ffffff",
+                  background: active === button.id ? "#444094" : "#ffffff",
                   borderRadius: "40px",
-                  padding: "15px 20px",
+                  padding: "20px 30px",
                   border: active === button.id ? "1px solid #66FF84" : "",
                   cursor: "pointer",
                   flexDirection: "column",
                 }}
               >
-                <Typography variant="h6" sx={{ color: "#444094", mt: 1 }}>
-                  {button.currency}
-                </Typography>
-                <Typography
-                  variant="h6"
-                  sx={{ color: "#9FAAB2", fontWeight: 100 }}
-                >
-                  {button.name}
-                </Typography>
-                <Grid sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                  <Grid sx={{ width: "20px" }}>
-                    <img src={button.img} alt="img" width="100%" />
+                <Grid sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                  <Grid sx={{ width: "30px" }}>
+                    <img
+                      src={
+                        active === button.id
+                          ? button.activeImg
+                          : button.disableImg
+                      }
+                      alt="img"
+                      width="100%"
+                    />
                   </Grid>
-                  <Typography variant="subtitle1" sx={{ color: "#9FAAB2" }}>
-                    {button.location}
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      color: active === button.id ? "#ffffff" : "#444094",
+                      mt: 1,
+                      fontWeight: 100,
+                    }}
+                  >
+                    {button.name}
                   </Typography>
                 </Grid>
               </Grid>
             );
           })}
+        </Grid>
+
+        <Grid>
+          <Typography
+            sx={{
+              color: "#444094",
+              fontWeight: 300,
+              fontSize: "40px",
+              textAlign: "center",
+              mt: 4,
+            }}
+          >
+            Select your Crypto
+          </Typography>
+          <Grid container spacing={2} sx={{ mt: 3 }}>
+            {crypto.map((coin: any, index: number) => (
+              <Grid item md={1} lg={1} key={coin.id}>
+                <Grid>
+                  <Grid sx={{ width: "60px", cursor: "pointer" }}>
+                    <img
+                      src={`/images/crypto-icons/${coin.name}.svg`}
+                      width="100%"
+                      alt={coin.name}
+                    />
+                  </Grid>
+                  <Typography
+                    variant="subtitle2"
+                    sx={{
+                      textAlign: "center",
+                      color: "#444094",
+                      mt: 1,
+                      ml: 0.5,
+                    }}
+                  >
+                    {coin.name.toUpperCase()}
+                  </Typography>
+                </Grid>
+              </Grid>
+            ))}
+          </Grid>
+          <Grid
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              mt: 4,
+            }}
+          >
+            <PyButton title="View more" padding="10px 10rem" />
+          </Grid>
         </Grid>
 
         <Typography
@@ -260,9 +375,9 @@ function BuySellCrypto() {
                   color: "#ffffff",
                 },
                 "& .MuiOutlinedInput": {
-                    borderRadius: "30px",
-                    color: "#ffffff",
-                  },
+                  borderRadius: "30px",
+                  color: "#ffffff",
+                },
                 "& .MuiOutlinedInput-notchedOutline": {
                   borderColor: "#444094",
                 },
@@ -274,11 +389,7 @@ function BuySellCrypto() {
                 endAdornment: (
                   <InputAdornment position="start">
                     <Grid sx={{ width: "20px" }}>
-                      <img
-                        src="/images/edit.png"
-                        alt="edit"
-                        width="100%"
-                      />
+                      <img src="/images/edit.png" alt="edit" width="100%" />
                     </Grid>
                   </InputAdornment>
                 ),
