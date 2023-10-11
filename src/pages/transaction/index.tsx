@@ -7,6 +7,14 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import PyTransparentButton from "@/components/py-transparent-button";
 import PyButton from "@/components/py-button";
 
+import Timeline from "@mui/lab/Timeline";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineDot from "@mui/lab/TimelineDot";
+import { timelineItemClasses } from "@mui/lab/TimelineItem";
+
 import Link from "next/link";
 
 function Transaction() {
@@ -246,9 +254,58 @@ function Transaction() {
                 }}
               ></Grid>
               <Grid>
-                <Typography sx={{ fontWeight: 100, color: "#000000" }}>
-                  Crypto released
-                </Typography>
+                <Timeline
+                  sx={{
+                    [`& .${timelineItemClasses.root}:before`]: {
+                      flex: 0,
+                      padding: 0,
+                    },
+                  }}
+                >
+                  <TimelineItem>
+                    <TimelineSeparator>
+                      <TimelineDot sx={{ background: "#444094" }} />
+                      <TimelineConnector sx={{ background: "#444094" }} />
+                    </TimelineSeparator>
+                    <TimelineContent>
+                      <Typography sx={{ fontWeight: 100, color: "#000000" }}>
+                        Crypto released
+                      </Typography>
+                    </TimelineContent>
+                  </TimelineItem>
+                  <TimelineItem>
+                    <TimelineSeparator>
+                      <TimelineDot sx={{ background: "#444094" }} />
+                      <TimelineConnector sx={{ background: "#444094" }} />
+                    </TimelineSeparator>
+                    <TimelineContent>
+                      <Typography sx={{ fontWeight: 100, color: "#000000" }}>
+                        Bank transfer received
+                      </Typography>
+                    </TimelineContent>
+                  </TimelineItem>
+                  <TimelineItem>
+                    <TimelineSeparator>
+                      <TimelineDot sx={{ background: "#444094" }} />
+                      <TimelineConnector sx={{ background: "#444094" }} />
+                    </TimelineSeparator>
+                    <TimelineContent>
+                      <Typography sx={{ fontWeight: 100, color: "#000000" }}>
+                        Bank transfer sent
+                      </Typography>
+                    </TimelineContent>
+                  </TimelineItem>
+                  <TimelineItem>
+                    <TimelineSeparator>
+                      <TimelineDot sx={{ background: "#444094" }} />
+                    </TimelineSeparator>
+                    <TimelineContent>
+                      <Typography sx={{ fontWeight: 100, color: "#000000" }}>
+                        Transaction created
+                      </Typography>
+                    </TimelineContent>
+                  </TimelineItem>
+                </Timeline>
               </Grid>
             </Grid>
           </Grid>
