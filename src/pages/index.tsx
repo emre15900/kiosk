@@ -68,7 +68,15 @@ export default function Home() {
 
   return (
     <Grid sx={{ padding: "40px" }}>
-      <Grid sx={{ mb: 5, display: "flex", alignItems: "center", gap: "10px" }}>
+      <Grid
+        sx={{
+          mb: 5,
+          display: "flex",
+          alignItems: "center",
+          gap: "10px",
+          flexWrap: "wrap",
+        }}
+      >
         <Typography variant="h5">PAGES:</Typography>
         <Link href="/">
           <Typography
@@ -188,6 +196,18 @@ export default function Home() {
             }}
           >
             Send Money Step 4
+          </Typography>
+        </Link>
+        <Link href="/otp">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+            OTP
           </Typography>
         </Link>
       </Grid>
