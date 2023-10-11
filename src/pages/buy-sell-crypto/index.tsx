@@ -170,28 +170,10 @@ function BuySellCrypto() {
     setActive(id);
   };
 
-  const [option, setOption] = useState("");
+  const [activePay, setActivePay] = useState(1);
 
-  const handleChangeOption = (event: SelectChangeEvent) => {
-    setOption(event.target.value as string);
-  };
-
-  const [branch, setBranch] = useState("");
-
-  const handleChangeBranch = (event: SelectChangeEvent) => {
-    setBranch(event.target.value as string);
-  };
-
-  const [person, setPerson] = useState("person1");
-
-  const handleChangePerson = (event: SelectChangeEvent) => {
-    setPerson(event.target.value as string);
-  };
-
-  const [gender, setGender] = useState("");
-
-  const handleChangeGender = (event: SelectChangeEvent) => {
-    setGender(event.target.value as string);
+  const handleClickPay = (id: number) => {
+    setActivePay(id);
   };
 
   return (
@@ -201,6 +183,7 @@ function BuySellCrypto() {
         alignItems: "center",
         justifyContent: "center",
         width: "100%",
+        padding: "0 10px 10px 10px",
       }}
     >
       <Card
@@ -338,11 +321,12 @@ function BuySellCrypto() {
               return (
                 <Grid key={button.id} item md={4} lg={4}>
                   <Grid
-                    onClick={() => handleClick(button.id)}
+                    onClick={() => handleClickPay(button.id)}
                     sx={{
                       display: "flex",
                       alignItems: "center",
-                      background: active === button.id ? "#444094" : "#ffffff",
+                      background:
+                        activePay === button.id ? "#444094" : "#ffffff",
                       borderRadius: "20px",
                       padding: "20px",
                       border: "1px solid #444094",
@@ -357,7 +341,8 @@ function BuySellCrypto() {
                       <Typography
                         variant="subtitle2"
                         sx={{
-                          color: active === button.id ? "#ffffff" : "#000000",
+                          color:
+                            activePay === button.id ? "#ffffff" : "#000000",
                           mt: 1,
                           fontWeight: 100,
                           whiteSpace: "nowrap",
@@ -368,7 +353,8 @@ function BuySellCrypto() {
                       <Typography
                         variant="subtitle2"
                         sx={{
-                          color: active === button.id ? "#ffffff" : "#444094",
+                          color:
+                            activePay === button.id ? "#ffffff" : "#444094",
                           mt: 1,
                           fontWeight: 100,
                           whiteSpace: "nowrap",
@@ -379,7 +365,8 @@ function BuySellCrypto() {
                       <Typography
                         variant="subtitle2"
                         sx={{
-                          color: active === button.id ? "#66FF84" : "#444094",
+                          color:
+                            activePay === button.id ? "#66FF84" : "#444094",
                           mt: 1,
                           fontWeight: 100,
                           whiteSpace: "nowrap",
@@ -391,7 +378,7 @@ function BuySellCrypto() {
                     <Typography
                       variant="subtitle2"
                       sx={{
-                        color: active === button.id ? "#ffffff" : "#000000",
+                        color: activePay === button.id ? "#ffffff" : "#000000",
                         mt: 1,
                         fontWeight: 100,
                         whiteSpace: "nowrap",

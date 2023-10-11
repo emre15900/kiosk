@@ -210,6 +210,30 @@ export default function Home() {
             OTP
           </Typography>
         </Link>
+        <Link href="/buy-sell-crypto">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+           Buy Sell Crypto
+          </Typography>
+        </Link>
+        <Link href="/identity-verification">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+            Identity Verification
+          </Typography>
+        </Link>
       </Grid>
       <Grid container spacing={2}>
         {rows?.map((row, rowIndex) => (

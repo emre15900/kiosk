@@ -25,6 +25,7 @@ function IdentityVerification() {
         sx={{
           mt: 5,
           boxShadow: "none",
+          padding: "0 50px 50px 50px",
         }}
       >
         <Typography
@@ -193,7 +194,7 @@ function IdentityVerification() {
                   >
                     <Grid sx={{ width: "90px" }}>
                       <img
-                        src="/images/identity-1.webp"
+                        src="/images/identity-1.png"
                         width="100%"
                         alt="selfie"
                       />
@@ -207,7 +208,7 @@ function IdentityVerification() {
                   >
                     <Grid sx={{ width: "100px" }}>
                       <img
-                        src="/images/identity-2.webp"
+                        src="/images/identity-2.png"
                         width="100%"
                         alt="selfie"
                       />
@@ -221,7 +222,7 @@ function IdentityVerification() {
                   >
                     <Grid sx={{ width: "90px" }}>
                       <img
-                        src="/images/identity-3.webp"
+                        src="/images/identity-3.png"
                         width="100%"
                         alt="selfie"
                       />
@@ -241,13 +242,11 @@ function IdentityVerification() {
                   >
                     <Grid
                       sx={{
-                        width: "105px",
-                        marginLeft: "-15px",
-                        marginTop: "-15px",
+                        width: "90px",
                       }}
                     >
                       <img
-                        src="/images/identity-4.webp"
+                        src="/images/identity-4.png"
                         width="100%"
                         alt="selfie"
                       />
@@ -328,7 +327,7 @@ function IdentityVerification() {
                     </Grid>
                     <Typography
                       variant="subtitle1"
-                      sx={{ color: "#000000", fontWeight: "400" }}
+                      sx={{ color: "#000000", fontWeight: "400", ml: 0.7 }}
                     >
                       No black and white images
                     </Typography>
@@ -341,7 +340,7 @@ function IdentityVerification() {
                     </Grid>
                     <Typography
                       variant="subtitle1"
-                      sx={{ color: "#000000", fontWeight: "400" }}
+                      sx={{ color: "#000000", fontWeight: "400", ml: 0.7  }}
                     >
                       No edited or expire documents{" "}
                     </Typography>
