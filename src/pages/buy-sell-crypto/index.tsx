@@ -336,10 +336,9 @@ function BuySellCrypto() {
           <Grid container spacing={2} justifyContent={"center"} sx={{ mt: 4 }}>
             {pays.map((button) => {
               return (
-                <Grid item md={4} lg={4}>
+                <Grid key={button.id} item md={4} lg={4}>
                   <Grid
                     onClick={() => handleClick(button.id)}
-                    key={button.id}
                     sx={{
                       display: "flex",
                       alignItems: "center",

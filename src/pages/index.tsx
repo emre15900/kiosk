@@ -73,7 +73,7 @@ export default function Home() {
           mb: 5,
           display: "flex",
           alignItems: "center",
-          gap: "10px",
+          gap: "20px",
           flexWrap: "wrap",
         }}
       >
