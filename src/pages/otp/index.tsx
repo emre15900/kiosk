@@ -16,6 +16,7 @@ import PyButton from "@/components/py-button";
 import Link from "next/link";
 import SelectMoney from "@/components/select-money";
 import PyOtp from "@/components/py-otp";
+import PyTransparentButton from "@/components/py-transparent-button";
 
 function Otp() {
   const [active, setActive] = useState(1);
@@ -166,7 +167,7 @@ function Otp() {
                 justifyContent: "center",
               }}
             >
-              <PyButton title="Back " padding="10px 6rem" />
+              <PyTransparentButton title="Back " padding="10px 6rem" />
             </Grid>
           </Link>
           <Link href="/sendmoney/step-2">

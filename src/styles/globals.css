@@ -36,6 +36,10 @@
   background: #5b56bd !important;
 }
 
+.hoverButtonTransparent:hover {
+  background: #ddd !important;
+}
+
 .ReactInputVerificationCode__item {
   border-radius: 50% !important;
   width: 5rem !important;
@@ -44,4 +48,27 @@
 
 .ReactInputVerificationCode__item:focus {
   border: 3px solid red !important;
+}
+
+/* Choose File Color */
+input[type="file"]::file-selector-button {
+  border: none;
+  padding: 10px 20px;
+  margin: 8px;
+  border-radius: 30px;
+  background-color: #726dc5;
+  color: #ffffff;
+  transition: 0.3s;
+  /* filter: drop-shadow(0 0 4px #4444dd); */
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button:hover {
+  border: none;
+  padding: 10px 20px;
+  margin: 8px;
+  border-radius: 30px;
+  background-color: #444094;
+  transition: 0.3s;
+  /* filter: drop-shadow(0 0 4px #4444dd); */
 }
