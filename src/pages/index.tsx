@@ -222,7 +222,7 @@ export default function Home() {
            Buy Sell Crypto
           </Typography>
         </Link>
-        {/* <Link href="/identity-verification">
+        <Link href="/identity-verification">
           <Typography
             variant="h6"
             sx={{
@@ -233,7 +233,7 @@ export default function Home() {
           >
             Identity Verification
           </Typography>
-        </Link> */}
+        </Link>
       </Grid>
       <Grid container spacing={2}>
         {rows?.map((row, rowIndex) => (
