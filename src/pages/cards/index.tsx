@@ -55,6 +55,7 @@ function Cards() {
       >
         Order your card in 4 staps
       </Typography>
+
       <Card
         sx={{
           background: "#F4F4F4",
@@ -70,7 +71,7 @@ function Cards() {
             alignItems: "center",
             justifyContent: "space-between",
             gap: 1,
-            mb: 8
+            mb: 8,
           }}
         >
           <Grid>
@@ -347,6 +348,77 @@ function Cards() {
             }}
           >
             <PyButton title="Order now" padding="10px 6rem" />
+          </Grid>
+        </Link>
+      </Card>
+
+      <Typography
+        sx={{
+          color: "#444094",
+          fontWeight: 300,
+          fontSize: "40px",
+          textAlign: "center",
+          mt: 10,
+          mb: 4,
+        }}
+      >
+        You can choose your own design
+      </Typography>
+
+      <Card
+        sx={{
+          background: "#F4F4F4",
+          padding: "50px",
+          mt: 5,
+          borderRadius: "30px",
+          boxShadow: "none",
+        }}
+      >
+        <Grid
+          sx={{ display: "flex", alignItems: "center", gap: "20px", mt: 4 }}
+        >
+          {buttons.map((button) => {
+            return (
+              <Grid key={button.id}>
+                <Grid
+                  onClick={() => handleClick(button.id)}
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    borderRadius: "40px",
+                    border: active === button.id ? "1px solid #66FF84" : "",
+                    cursor: "pointer",
+                    flexDirection: "column",
+                    width: "100%",
+                  }}
+                >
+                  <Grid
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Grid sx={{ width: "300px" }}>
+                      <img src={button.img} alt="img" width="100%" />
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Grid>
+            );
+          })}
+        </Grid>
+
+        <Link href="/sendmoney/step-2">
+          <Grid
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              mt: 8,
+            }}
+          >
+            <PyButton title="Complete" padding="10px 6rem" />
           </Grid>
         </Link>
       </Card>
