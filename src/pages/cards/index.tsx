@@ -1,20 +1,9 @@
 import React, { useState } from "react";
-import {
-  Card,
-  Grid,
-  Typography,
-  TextField,
-  FormControl,
-  InputAdornment,
-} from "@mui/material";
+import { Card, Grid, Typography } from "@mui/material";
 
-import TelInput from "@/components/tel-input";
-
-import Select, { SelectChangeEvent } from "@mui/material/Select";
 import PyButton from "@/components/py-button";
 
 import Link from "next/link";
-import SelectMoney from "@/components/select-money";
 
 const buttons = [
   {
@@ -44,12 +33,6 @@ function Cards() {
     setActive(id);
   };
 
-  const [activePay, setActivePay] = useState(1);
-
-  const handleClickPay = (id: number) => {
-    setActivePay(id);
-  };
-
   return (
     <Grid
       sx={{
@@ -57,7 +40,7 @@ function Cards() {
         alignItems: "center",
         justifyContent: "center",
         width: "100%",
-        padding: "0 10px 10px 10px",
+        padding: "0 20px 20px 20px",
         flexDirection: "column",
       }}
     >
@@ -75,12 +58,66 @@ function Cards() {
       <Card
         sx={{
           background: "#F4F4F4",
-          padding: "50px 120px",
+          padding: "50px",
           mt: 5,
           borderRadius: "30px",
           boxShadow: "none",
         }}
       >
+        <Grid
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: 1,
+            mb: 8
+          }}
+        >
+          <Grid>
+            <Typography variant="h4" sx={{ color: "#66FF84", fontWeight: 400 }}>
+              step1
+            </Typography>
+            <Typography
+              variant="subtitle2"
+              sx={{ color: "#444094", fontWeight: 300 }}
+            >
+              Card Select
+            </Typography>
+          </Grid>
+          <Grid>
+            <Typography variant="h4" sx={{ color: "#9FAAB2", fontWeight: 400 }}>
+              step2
+            </Typography>
+            <Typography
+              variant="subtitle2"
+              sx={{ color: "#444094", fontWeight: 300 }}
+            >
+              Card Type
+            </Typography>
+          </Grid>
+          <Grid>
+            <Typography variant="h4" sx={{ color: "#9FAAB2", fontWeight: 400 }}>
+              step3
+            </Typography>
+            <Typography
+              variant="subtitle2"
+              sx={{ color: "#444094", fontWeight: 300 }}
+            >
+              Passport Detail
+            </Typography>
+          </Grid>
+          <Grid>
+            <Typography variant="h4" sx={{ color: "#9FAAB2", fontWeight: 400 }}>
+              step4
+            </Typography>
+            <Typography
+              variant="subtitle2"
+              sx={{ color: "#444094", fontWeight: 300 }}
+            >
+              Payment Detail
+            </Typography>
+          </Grid>
+        </Grid>
         <Grid
           sx={{ display: "flex", alignItems: "center", gap: "20px", mt: 4 }}
         >
