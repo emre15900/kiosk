@@ -4,6 +4,7 @@ import { Card, Grid, Typography } from "@mui/material";
 import PyButton from "@/components/py-button";
 
 import Link from "next/link";
+import ChooseCard from "@/components/choose-card";
 
 const buttons = [
   {
@@ -351,6 +352,10 @@ function Cards() {
           </Grid>
         </Link>
       </Card>
+
+      <Grid>
+        <ChooseCard />
+      </Grid>
 
       <Typography
         sx={{
