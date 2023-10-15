@@ -73,30 +73,126 @@ input[type="file"]::file-selector-button:hover {
   /* filter: drop-shadow(0 0 4px #4444dd); */
 }
 
-.swiper {
+.py_GridRowSwiper .swiper {
   width: 100%;
   height: 100%;
 }
 
-.swiper-slide {
+.py_GridRowSwiper .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
 
   /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
   align-items: center;
 }
 
-.swiper-slide img {
+.py_GridRowSwiper .swiper-slide img {
   display: block;
   width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 
-.swiper {
+.py_GridRowSwiper .swiper {
+  width: 100%;
+  height: 200px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.py_GridRowSwiper .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.py_GridRowSwiper .mySwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.py_GridRowSwiper .mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.7;
+}
+
+.py_GridRowSwiper .mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.py_GridRowSwiper .mySwiper .swiper-slide-thumb-active::before {
+  content: url(/images/active-check.png);
+  width: 2px;
+  top: -14%;
+  right: 55%;
+  bottom: 0;
+  position: absolute;
+}
+
+.py_GridRowSwiper .swiper-slide img {
+  display: block;
+  width: 115px;
+  object-fit: cover;
+}
+
+.py_GridRowSwiper .mySwiper2 {
+  height: 80%;
+  width: 100%;
+}
+
+.py_GridRowSwiper .mySwiper2 img {
+  width: 50%;
+}
+
+.py_GridRowSwiper .swiper-button-next,
+.py_GridRowSwiper .swiper-button-prev {
+  color: #ffffff !important;
+}
+
+.pyChooseCardDesign .MuiDialog-paper {
+  max-width: 800px !important;
+}
+
+.py_GridRowSwiper .swiper-button-prev {
+  content: url("/images/swiper-arrow-left.svg");
+  width: 40px;
+  top: 90%;
+  left: 30%;
+}
+.py_GridRowSwiper .swiper-button-next {
+  content: url("/images/swiper-arrow-right.svg");
+  width: 120px;
+  top: 90%;
+  right: 49%;
+  bottom: 0;
+}
+
+.py_GridRowSwiper .swiper-pagination-bullet {
+  background: #b1b1b1 !important;
+  /* opacity: 1 !important; */
+}
+
+.py_GridRowSwiper .swiper-pagination-bullet-active {
+  background: #5630ff !important;
+}
+
+.py_GridRowSwiper .swiper-pagination-fraction {
+  bottom: 6%;
+  left: 17%;
+  z-index: 1;
+  font-size: 16px;
+  font-weight: 400;
+  color: #a6adb4;
 }

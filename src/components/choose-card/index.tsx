@@ -1,17 +1,21 @@
-import React from "react";
-
-// import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/free-mode";
 import "swiper/css/navigation";
+import "swiper/css/thumbs";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 
-import { Grid } from "@mui/material";
+// eslint-disable-next-line
+import "swiper/css/bundle";
+
+// Import Swiper styles
+import "swiper/css/pagination";
+
+// import required modules
+import { FreeMode, Navigation, Thumbs, Grid, Pagination } from "swiper/modules";
 
 const cardList = [
   {
@@ -249,41 +253,137 @@ const cardList = [
 ];
 
 function ChooseCard() {
+  const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
+
   return (
-    <Grid sx={{ width: "1000px" }}>
-      <Swiper
-        // install Swiper modules
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={50}
-        slidesPerView={3}
-        navigation
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
-      >
-        <SwiperSlide>
-          <Grid sx={{ width: "300px" }}>
-            <img src="/images/card-1.png" alt="img" width="100%" />
-          </Grid>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Grid sx={{ width: "300px" }}>
-            <img src="/images/card-2.png" alt="img" width="100%" />
-          </Grid>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Grid sx={{ width: "300px" }}>
-            <img src="/images/card-3.png" alt="img" width="100%" />
-          </Grid>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Grid sx={{ width: "300px" }}>
-            <img src="/images/card-2.png" alt="img" width="100%" />
-          </Grid>
-        </SwiperSlide>
-      </Swiper>
-    </Grid>
+    <div style={{ width: "1000px" }}>
+      <div className="py_GridRowSwiper">
+        <Swiper
+          pagination={{
+            type: "fraction",
+            formatFractionCurrent: function (number) {
+              return ("0" + number).slice(-2);
+            },
+            formatFractionTotal: function (number) {
+              return ("0" + number).slice(-2);
+            },
+            renderFraction: function (currentClass, totalClass) {
+              return (
+                '<span class="' +
+                currentClass +
+                '"></span>' +
+                " / " +
+                '<span class="' +
+                totalClass +
+                '"></span>'
+              );
+            },
+          }}
+          loop={true}
+          spaceBetween={10}
+          navigation={true}
+        //   thumbs={{ swiper: thumbsSwiper }}
+          modules={[FreeMode, Navigation, Pagination, Thumbs]}
+          className="mySwiper2"
+        >
+          {cardList &&
+            cardList?.map((slider, index: number) => {
+              return (
+                <SwiperSlide key={index}>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      width: "100%",
+                      marginBottom: "60px",
+                      marginTop: "10px",
+                    }}
+                  >
+                    <img
+                      src={slider.card_image}
+                      width="100%"
+                      alt="img"
+                      style={{ maxHeight: "250px", objectFit: "contain" }}
+                    />
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+        </Swiper>
+        <Swiper
+          onSwiper={setThumbsSwiper}
+          grid={{
+            rows: 4,
+            fill: "row",
+          }}
+          breakpoints={{
+            250: {
+              slidesPerView: 3,
+              spaceBetween: 10,
+              grid: {
+                rows: 12,
+                fill: "row",
+              },
+            },
+            468: {
+              slidesPerView: 3,
+              spaceBetween: 10,
+              grid: {
+                rows: 9,
+                fill: "row",
+              },
+            },
+            650: {
+              slidesPerView: 4,
+              spaceBetween: 10,
+              grid: {
+                rows: 6,
+                fill: "row",
+              },
+            },
+            768: {
+              slidesPerView: 5,
+              spaceBetween: 10,
+              grid: {
+                rows: 6,
+                fill: "row",
+              },
+            },
+            992: {
+              slidesPerView: 6,
+              spaceBetween: 10,
+              grid: {
+                rows: 4,
+                fill: "row",
+              },
+            },
+          }}
+          spaceBetween={10}
+          slidesPerView={6}
+          freeMode={true}
+          watchSlidesProgress={true}
+          modules={[FreeMode, Navigation, Thumbs, Grid]}
+          className="mySwiper"
+        >
+          {cardList &&
+            cardList?.map((slider, index: number) => {
+              return (
+                <SwiperSlide key={index}>
+                  <div style={{ cursor: "pointer" }}>
+                    <img
+                      src={slider.card_image}
+                      width="100%"
+                      alt="img"
+                      style={{ maxHeight: "75px", objectFit: "contain" }}
+                    />
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+        </Swiper>
+      </div>
+    </div>
   );
 }
 
