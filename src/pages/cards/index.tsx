@@ -353,10 +353,6 @@ function Cards() {
         </Link>
       </Card>
 
-      <Grid>
-        <ChooseCard />
-      </Grid>
-
       <Typography
         sx={{
           color: "#444094",
@@ -372,46 +368,15 @@ function Cards() {
 
       <Card
         sx={{
-          background: "#F4F4F4",
+          background: "#F9F9F9",
           padding: "50px",
           mt: 5,
-          borderRadius: "30px",
+          borderRadius: "50px",
           boxShadow: "none",
         }}
       >
-        <Grid
-          sx={{ display: "flex", alignItems: "center", gap: "20px", mt: 4 }}
-        >
-          {buttons.map((button) => {
-            return (
-              <Grid key={button.id}>
-                <Grid
-                  onClick={() => handleClick(button.id)}
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    borderRadius: "40px",
-                    border: active === button.id ? "1px solid #66FF84" : "",
-                    cursor: "pointer",
-                    flexDirection: "column",
-                    width: "100%",
-                  }}
-                >
-                  <Grid
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <Grid sx={{ width: "300px" }}>
-                      <img src={button.img} alt="img" width="100%" />
-                    </Grid>
-                  </Grid>
-                </Grid>
-              </Grid>
-            );
-          })}
+        <Grid>
+          <ChooseCard />
         </Grid>
 
         <Link href="/sendmoney/step-2">
