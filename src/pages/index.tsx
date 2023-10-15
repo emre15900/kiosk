@@ -219,7 +219,7 @@ export default function Home() {
               cursor: "pointer",
             }}
           >
-           Buy Sell Crypto
+            Buy Sell Crypto
           </Typography>
         </Link>
         <Link href="/identity-verification">
@@ -232,6 +232,18 @@ export default function Home() {
             }}
           >
             Identity Verification
+          </Typography>
+        </Link>
+        <Link href="/cards">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+            Cards
           </Typography>
         </Link>
       </Grid>
