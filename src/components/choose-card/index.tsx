@@ -253,8 +253,6 @@ const cardList = [
 ];
 
 function ChooseCard() {
-  const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
-
   return (
     <div style={{ width: "1000px" }}>
       <div className="py_GridRowSwiper">
@@ -282,7 +280,6 @@ function ChooseCard() {
           loop={true}
           spaceBetween={10}
           navigation={true}
-        //   thumbs={{ swiper: thumbsSwiper }}
           modules={[FreeMode, Navigation, Pagination, Thumbs]}
           className="mySwiper2"
         >
@@ -312,7 +309,6 @@ function ChooseCard() {
             })}
         </Swiper>
         <Swiper
-          onSwiper={setThumbsSwiper}
           grid={{
             rows: 4,
             fill: "row",
