@@ -253,7 +253,7 @@ const cardList = [
 ];
 
 function ChooseCard() {
-    console.log("cardList", cardList)
+    console.log("cardListsaf", cardList)
   return (
     <div style={{ width: "1000px" }}>
       <div className="py_GridRowSwiper">
