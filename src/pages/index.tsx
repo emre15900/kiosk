@@ -246,6 +246,18 @@ export default function Home() {
             Cards
           </Typography>
         </Link>
+        <Link href="/card-type">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+            Card Type
+          </Typography>
+        </Link>
       </Grid>
       <Grid container spacing={2}>
         {rows?.map((row, rowIndex) => (
