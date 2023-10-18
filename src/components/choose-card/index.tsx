@@ -16,6 +16,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { FreeMode, Navigation, Thumbs, Grid, Pagination } from "swiper/modules";
+import { Typography } from "@mui/material";
 
 const cardList = [
   {
@@ -253,9 +254,11 @@ const cardList = [
 ];
 
 function ChooseCard() {
-    console.log("cardList", cardList)
   return (
     <div style={{ width: "1000px" }}>
+      <Typography variant="h6" sx={{ color: "#444094", mt: "-1.5rem", mb: 4 }}>
+        Choose card design
+      </Typography>
       <div className="py_GridRowSwiper">
         <Swiper
           pagination={{
