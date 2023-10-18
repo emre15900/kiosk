@@ -61,6 +61,7 @@ function CardType() {
           mt: 5,
           borderRadius: "30px",
           boxShadow: "none",
+          minWidth: 1000,
         }}
       >
         <Grid
@@ -125,7 +126,7 @@ function CardType() {
           Create new recipients, & continue your process
         </Typography>
 
-        <Grid>
+        <Grid sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
           <Grid
             sx={{ display: "flex", alignItems: "center", gap: "10px", mt: 4 }}
           >
@@ -168,15 +169,11 @@ function CardType() {
               />
             </FormControl>
           </Grid>
-          <Grid sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <Grid
+            sx={{ display: "flex", alignItems: "center", gap: "10px", mb: 1 }}
+          >
             <FormControl fullWidth>
-              <InputLabel id="demo-simple-select-label">Gender</InputLabel>
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={gender}
-                label="Gender"
-                onChange={handleChangeGender}
+              <TextField
                 sx={{
                   borderRadius: "30px",
                   borderColor: "#444094",
@@ -188,26 +185,18 @@ function CardType() {
                     borderColor: "#444094",
                   },
                 }}
-              >
-                <MenuItem value={10}>Male</MenuItem>
-                <MenuItem value={20}>Female</MenuItem>
-              </Select>
+                id="outlined-basic"
+                label="Email"
+                variant="outlined"
+              />
             </FormControl>
             <Grid sx={{ width: "100%" }}>
               <TelInput />
             </Grid>
           </Grid>
-          <Grid
-            sx={{ mt: 1, display: "flex", alignItems: "center", gap: "10px" }}
-          >
+          <Grid sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
             <FormControl fullWidth>
-              <InputLabel id="demo-simple-select-label">Relatioship</InputLabel>
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={option}
-                label="Relatioship"
-                onChange={handleChangeOption}
+              <TextField
                 sx={{
                   borderRadius: "30px",
                   borderColor: "#444094",
@@ -219,10 +208,10 @@ function CardType() {
                     borderColor: "#444094",
                   },
                 }}
-              >
-                <MenuItem value={10}>Relatioship 1</MenuItem>
-                <MenuItem value={20}>Relatioship 2</MenuItem>
-              </Select>
+                id="outlined-basic"
+                label="Passport"
+                variant="outlined"
+              />
             </FormControl>
             <FormControl fullWidth>
               <TextField
@@ -238,7 +227,7 @@ function CardType() {
                   },
                 }}
                 id="outlined-basic"
-                label="Bank account number / IBAN"
+                label="Passport date of experation"
                 variant="outlined"
               />
             </FormControl>
@@ -260,7 +249,7 @@ function CardType() {
                   },
                 }}
                 id="outlined-basic"
-                label="Bank name"
+                label="Zip code"
                 variant="outlined"
               />
             </FormControl>
@@ -278,29 +267,7 @@ function CardType() {
                   },
                 }}
                 id="outlined-basic"
-                label="SWIFT code"
-                variant="outlined"
-              />
-            </FormControl>
-          </Grid>
-          <Grid
-            sx={{ mt: 1, display: "flex", alignItems: "center", gap: "10px" }}
-          >
-            <FormControl fullWidth>
-              <TextField
-                sx={{
-                  borderRadius: "30px",
-                  borderColor: "#444094",
-                  "& .MuiOutlinedInput-root": {
-                    borderRadius: "30px",
-                    color: "#444094",
-                  },
-                  "& .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "#444094",
-                  },
-                }}
-                id="outlined-basic"
-                label="Bank address"
+                label="Birth date"
                 variant="outlined"
               />
             </FormControl>
@@ -313,6 +280,7 @@ function CardType() {
             alignItems: "center",
             gap: 2,
             justifyContent: "center",
+            mt: 5,
           }}
         >
           <Link href="/sendmoney/step-2">
@@ -321,7 +289,6 @@ function CardType() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                mt: 8,
               }}
             >
               <PyTransparentButton title="Back" padding="10px 7rem" />
@@ -333,7 +300,6 @@ function CardType() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                mt: 8,
               }}
             >
               <PyButton title="Continue" padding="10px 6rem" />
