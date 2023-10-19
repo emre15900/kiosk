@@ -17,6 +17,7 @@ import PyButton from "@/components/py-button";
 
 import Link from "next/link";
 import PyTransparentButton from "@/components/py-transparent-button";
+import PyDatePicker from "@/components/py-date-picker";
 
 function CardType() {
   const [option, setOption] = useState("");
@@ -227,7 +228,7 @@ function CardType() {
                   },
                 }}
                 id="outlined-basic"
-                label="Passport date of experation"
+                label="Zip code"
                 variant="outlined"
               />
             </FormControl>
@@ -235,42 +236,12 @@ function CardType() {
           <Grid
             sx={{ mt: 1, display: "flex", alignItems: "center", gap: "10px" }}
           >
-            <FormControl fullWidth>
-              <TextField
-                sx={{
-                  borderRadius: "30px",
-                  borderColor: "#444094",
-                  "& .MuiOutlinedInput-root": {
-                    borderRadius: "30px",
-                    color: "#444094",
-                  },
-                  "& .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "#444094",
-                  },
-                }}
-                id="outlined-basic"
-                label="Zip code"
-                variant="outlined"
-              />
-            </FormControl>
-            <FormControl fullWidth>
-              <TextField
-                sx={{
-                  borderRadius: "30px",
-                  borderColor: "#444094",
-                  "& .MuiOutlinedInput-root": {
-                    borderRadius: "30px",
-                    color: "#444094",
-                  },
-                  "& .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "#444094",
-                  },
-                }}
-                id="outlined-basic"
-                label="Birth date"
-                variant="outlined"
-              />
-            </FormControl>
+            <Grid sx={{ width: "100%" }}>
+              <PyDatePicker title={"Passport date of experation"} />
+            </Grid>
+            <Grid sx={{ width: "100%" }}>
+              <PyDatePicker title={"Birth date"} />
+            </Grid>
           </Grid>
         </Grid>
 

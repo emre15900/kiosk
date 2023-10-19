@@ -193,3 +193,44 @@ input[type="file"]::file-selector-button:hover {
   font-weight: 400;
   color: #a6adb4;
 }
+
+.py-date-picker {
+  z-index: 9999999;
+}
+
+.py-date-picker .react-datepicker__input-container input {
+  border-radius: 30px;
+  border: 1px solid #444094;
+  padding: 14px 20px;
+  width: 100%;
+  background: transparent;
+}
+
+.py-date-picker .react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__header {
+  background-color: #040145 !important;
+}
+
+.react-datepicker__navigation-icon::before {
+  border-color: #ffffff !important;
+}
+
+.react-datepicker__current-month {
+  color: #ffffff !important;
+}
+
+.react-datepicker__day-name {
+  color: #ffffff !important;
+}
+
+.react-datepicker__day--selected {
+  background-color: #040145 !important;
+  border-radius: 50% !important;
+}
+
+.react-datepicker__navigation-icon::before {
+  top: 14px !important;
+}
