@@ -294,6 +294,42 @@ export default function Home() {
             Success
           </Typography>
         </Link> */}
+        {/* <Link href="/success-2">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+            Success Two
+          </Typography>
+        </Link> */}
+        {/* <Link href="/success-transfer">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+            Success Transfer
+          </Typography>
+        </Link> */}
+        {/* <Link href="/exchange-two">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+         Exchange Two
+          </Typography>
+        </Link> */}
       </Grid>
       <Grid container spacing={2}>
         {rows?.map((row, rowIndex) => (
