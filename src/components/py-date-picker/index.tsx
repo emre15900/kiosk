@@ -4,10 +4,7 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 
-// CSS Modules, react-datepicker-cssmodules.css
-// import 'react-datepicker/dist/react-datepicker-cssmodules.css';
-
-function PyDatePicker({title}: {title: string}) {
+function PyDatePicker({ title }: { title: string }) {
   const [startDate, setStartDate] = useState(new Date());
   return (
     <Grid className="py-date-picker" sx={{ width: "100%" }}>
@@ -21,6 +18,11 @@ function PyDatePicker({title}: {title: string}) {
         placeholderText="Select a date"
         selected={startDate}
         onChange={(date: any) => setStartDate(date)}
+      />
+      <img
+        src="/images/date-icon.png"
+        alt="date-picker"
+        className="date-icon"
       />
     </Grid>
   );
