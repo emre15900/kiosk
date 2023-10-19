@@ -258,6 +258,18 @@ export default function Home() {
             Card Type
           </Typography>
         </Link>
+        <Link href="/passport-details">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+           Passport Details
+          </Typography>
+        </Link>
       </Grid>
       <Grid container spacing={2}>
         {rows?.map((row, rowIndex) => (

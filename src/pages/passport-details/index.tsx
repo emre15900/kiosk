@@ -19,7 +19,7 @@ import Link from "next/link";
 import PyTransparentButton from "@/components/py-transparent-button";
 import PyDatePicker from "@/components/py-date-picker";
 
-function CardType() {
+function PassportDetails() {
   const [option, setOption] = useState("");
 
   const handleChangeOption = (event: SelectChangeEvent) => {
@@ -282,4 +282,4 @@ function CardType() {
   );
 }
 
-export default CardType;
+export default PassportDetails;
