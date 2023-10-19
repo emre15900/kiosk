@@ -19,6 +19,25 @@ import Link from "next/link";
 import PyTransparentButton from "@/components/py-transparent-button";
 import PyDatePicker from "@/components/py-date-picker";
 
+const currency = [
+  {
+    id: 1,
+    name: "Card payment",
+  },
+  {
+    id: 2,
+    name: "Crypto",
+  },
+  {
+    id: 3,
+    name: "Bank Wire Payment Sepa",
+  },
+  {
+    id: 4,
+    name: "Bank Wire Payment Swift",
+  },
+];
+
 function PaymentDetail() {
   const [option, setOption] = useState("");
 
@@ -30,6 +49,12 @@ function PaymentDetail() {
 
   const handleChangeGender = (event: SelectChangeEvent) => {
     setGender(event.target.value as string);
+  };
+
+  const [activeCurrency, setActiveCurrency] = useState(1);
+
+  const handleClickCurrency = (id: number) => {
+    setActiveCurrency(id);
   };
 
   return (
@@ -192,7 +217,60 @@ function PaymentDetail() {
               >
                 Card Type
               </Typography>
-              <Grid></Grid>
+              <Grid
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "20px",
+                  mt: 4,
+                }}
+              >
+                {currency.map((button) => {
+                  return (
+                    <Grid key={button.id}>
+                      <Grid
+                        onClick={() => handleClickCurrency(button.id)}
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          borderRadius: "40px",
+                          background:
+                            activeCurrency === button.id
+                              ? "#444094"
+                              : "#ffffff",
+                          padding: "10px",
+                          border: "1px solid #444094",
+                          cursor: "pointer",
+                          flexDirection: "column",
+                          width: "100%",
+                          minWidth: "300px",
+                        }}
+                      >
+                        <Grid
+                          sx={{
+                            display: "flex",
+                            gap: 1,
+                            alignItems: "center",
+                          }}
+                        >
+                          <Typography
+                            variant="h6"
+                            sx={{
+                              color:
+                                activeCurrency === button.id
+                                  ? "#ffffff"
+                                  : "#000000",
+                              fontWeight: 100,
+                            }}
+                          >
+                            {button.name}
+                          </Typography>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                  );
+                })}
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
