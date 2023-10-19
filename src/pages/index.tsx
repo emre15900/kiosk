@@ -267,9 +267,33 @@ export default function Home() {
               cursor: "pointer",
             }}
           >
-           Passport Details
+            Passport Details
           </Typography>
         </Link>
+        {/* <Link href="/payment-details">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+           Payment Details
+          </Typography>
+        </Link> */}
+        {/* <Link href="/success">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+            Success
+          </Typography>
+        </Link> */}
       </Grid>
       <Grid container spacing={2}>
         {rows?.map((row, rowIndex) => (
