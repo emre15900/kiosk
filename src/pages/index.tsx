@@ -282,7 +282,7 @@ export default function Home() {
             Passport Details
           </Typography>
         </Link>
-        <Link href="/payment-details">
+        <Link href="/payment-detail">
           <Typography
             variant="h6"
             sx={{
