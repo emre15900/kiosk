@@ -279,10 +279,10 @@ export default function Home() {
               cursor: "pointer",
             }}
           >
-           Payment Details
+            Payment Details
           </Typography>
         </Link>
-        {/* <Link href="/success">
+        <Link href="/success">
           <Typography
             variant="h6"
             sx={{
@@ -293,8 +293,8 @@ export default function Home() {
           >
             Success
           </Typography>
-        </Link> */}
-        {/* <Link href="/success-2">
+        </Link>
+        <Link href="/success-2">
           <Typography
             variant="h6"
             sx={{
@@ -305,8 +305,8 @@ export default function Home() {
           >
             Success Two
           </Typography>
-        </Link> */}
-        {/* <Link href="/success-transfer">
+        </Link>
+        <Link href="/success-transfer">
           <Typography
             variant="h6"
             sx={{
@@ -317,7 +317,19 @@ export default function Home() {
           >
             Success Transfer
           </Typography>
-        </Link> */}
+        </Link>
+        <Link href="/exchange-two">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+            Exchange Two
+          </Typography>
+        </Link>
         {/* <Link href="/exchange-two">
           <Typography
             variant="h6"
