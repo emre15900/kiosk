@@ -354,6 +354,18 @@ export default function Home() {
             Exchange Two
           </Typography>
         </Link>
+        <Link href="/pin-step-two">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+            Pin Step Two
+          </Typography>
+        </Link>
       </Grid>
       <Grid container spacing={2}>
         {rows?.map((row, rowIndex) => (
