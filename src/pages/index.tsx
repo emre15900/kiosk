@@ -126,18 +126,6 @@ export default function Home() {
             Pin Step 3
           </Typography>
         </Link>
-        <Link href="/pin/step-4">
-          <Typography
-            variant="h6"
-            sx={{
-              color: "#444094",
-              textDecoration: "underline",
-              cursor: "pointer",
-            }}
-          >
-            Pin Step 4
-          </Typography>
-        </Link>
         <Link href="/password">
           <Typography
             variant="h6"
@@ -364,6 +352,18 @@ export default function Home() {
             }}
           >
             Pin Step Two
+          </Typography>
+        </Link>
+        <Link href="/pin/step-4">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+            Pin Step 4
           </Typography>
         </Link>
       </Grid>
