@@ -4,10 +4,10 @@ import {
   Card,
   Typography,
   FormControl,
-  TextField,
   OutlinedInput,
   InputAdornment,
 } from "@mui/material";
+
 import Link from "next/link";
 import { useState } from "react";
 
@@ -16,6 +16,7 @@ interface ButtonProps {
   title: string;
   icon: string;
   link: string;
+  width: number;
 }
 
 const buttons: readonly ButtonProps[] = [
@@ -24,24 +25,56 @@ const buttons: readonly ButtonProps[] = [
     title: "Money Withdrawal",
     icon: "/images/pin-icon-1.png",
     link: "/pin",
+    width: 120,
   },
   {
     id: 2,
     title: "Money Deposit",
     icon: "/images/pin-icon-2.png",
     link: "/pin",
+    width: 120,
   },
   {
     id: 3,
     title: "Pin Change",
     icon: "/images/pin-icon-3.png",
     link: "/pin",
+    width: 100,
   },
   {
     id: 4,
     title: "Balance Enquiry",
     icon: "/images/pin-icon-4.png",
     link: "/pin",
+    width: 120,
+  },
+  {
+    id: 5,
+    title: "Buy/Sell Crypto",
+    icon: "/images/home-screen-icon-3.png",
+    link: "/pin",
+    width: 150,
+  },
+  {
+    id: 6,
+    title: "Cross Border Money Transfer",
+    icon: "/images/home-screen-icon-4.png",
+    link: "/pin",
+    width: 130,
+  },
+  {
+    id: 7,
+    title: "Get Virtual/Plastic Cards",
+    icon: "/images/home-screen-icon-5.png",
+    link: "/pin",
+    width: 150,
+  },
+  {
+    id: 8,
+    title: "FX Exchange",
+    icon: "/images/home-screen-icon-7.png",
+    link: "/pin",
+    width: 150,
   },
 ];
 
@@ -86,17 +119,10 @@ export default function PinStepFour() {
 
   return (
     <Grid sx={{ padding: "40px" }}>
-      <Grid
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: "30px",
-        }}
-      >
+      <Grid container spacing={6}>
         {buttons.map((button: any) => {
           return (
-            <Grid key={button.id}>
+            <Grid item sm={3} md={3} key={button.id}>
               <Link href={button.link}>
                 <Card
                   sx={{
@@ -109,8 +135,9 @@ export default function PinStepFour() {
                     justifyContent: "center",
                     boxShadow: "none",
                     gap: "20px",
-                    minHeight: "200px",
+                    minHeight: "250px",
                     minWidth: "250px",
+                    maxHeight: "250px",
                     cursor: "pointer",
                     transition: "all 0.1s ease",
                     "&:hover": {
@@ -118,7 +145,7 @@ export default function PinStepFour() {
                     },
                   }}
                 >
-                  <Grid sx={{ width: "60px" }}>
+                  <Grid sx={{ width: button.width }}>
                     <img src={button.icon} alt="icon" width="100%" />
                   </Grid>
                   <Typography
@@ -137,9 +164,6 @@ export default function PinStepFour() {
             </Grid>
           );
         })}
-        <Grid sx={{ width: "55px" }}>
-          <img src="/images/arrow-right.png" alt="icon" width="100%" />
-        </Grid>
       </Grid>
       <Grid
         sx={{
