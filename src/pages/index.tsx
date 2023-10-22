@@ -318,6 +318,18 @@ export default function Home() {
             Success Transfer
           </Typography>
         </Link>
+        {/* <Link href="/exchange">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+         Exchange
+          </Typography>
+        </Link> */}
         <Link href="/exchange-step-2">
           <Typography
             variant="h6"
@@ -330,18 +342,6 @@ export default function Home() {
             Exchange Two
           </Typography>
         </Link>
-        {/* <Link href="/exchange-two">
-          <Typography
-            variant="h6"
-            sx={{
-              color: "#444094",
-              textDecoration: "underline",
-              cursor: "pointer",
-            }}
-          >
-         Exchange Two
-          </Typography>
-        </Link> */}
       </Grid>
       <Grid container spacing={2}>
         {rows?.map((row, rowIndex) => (
