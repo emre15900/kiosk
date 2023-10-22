@@ -234,6 +234,18 @@ export default function Home() {
             Identity Verification
           </Typography>
         </Link>
+        <Link href="/transaction">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#444094",
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+            Transaction
+          </Typography>
+        </Link>
         <Link href="/cards">
           <Typography
             variant="h6"
