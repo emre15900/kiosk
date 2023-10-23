@@ -318,7 +318,7 @@ export default function Home() {
             Success Transfer
           </Typography>
         </Link>
-        {/* <Link href="/exchange">
+        <Link href="/exchange">
           <Typography
             variant="h6"
             sx={{
@@ -329,7 +329,7 @@ export default function Home() {
           >
          Exchange
           </Typography>
-        </Link> */}
+        </Link>
         <Link href="/exchange-step-2">
           <Typography
             variant="h6"
