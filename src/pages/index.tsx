@@ -484,11 +484,14 @@ export default function Home() {
       </Grid>
       <Grid>
         <Grid sx={{ width: "100%" }}>
-          <img
+          {/* <img
             src="/images/animate/buildings.gif"
             alt="ana-binalar"
             width="100%"
-          />
+          /> */}
+          <video autoPlay loop muted poster="/images/animate/buildings.gif">
+            <source src="/images/animate/buildings.mp4" type="video/mp4" />
+          </video>
         </Grid>
       </Grid>
     </Grid>
