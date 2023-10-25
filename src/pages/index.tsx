@@ -388,16 +388,17 @@ export default function Home() {
           <img src="/images/logo.webp" alt="logo" width="100%" />
         </Grid>
         <Typography
-          variant="h6"
+          variant="h5"
           sx={{ mt: "-30px", color: "#000000", fontWeight: 600 }}
         >
-          slakfjllsafljks sjfksfjl
+          Деньги созданы, чтобы решать проблемы, а не создавать их.
         </Typography>
         <Typography
           variant="subtitle1"
           sx={{ mb: 12, mt: 2, color: "#000000", fontWeight: 400 }}
         >
-          slakfjllsafljks sjfksfjl <strong>220 sfsfa</strong>
+          Деньги созданы, чтобы решать проблемы, а не их.{" "}
+          <strong>220 создавать</strong>
         </Typography>
       </Grid>
       <Grid
