@@ -76,7 +76,7 @@ export default function Home() {
 
   return (
     <Grid sx={{ padding: "40px" }}>
-      <Grid
+      {/* <Grid
         sx={{
           mb: 5,
           display: "flex",
@@ -374,7 +374,7 @@ export default function Home() {
             Pin Step 4
           </Typography>
         </Link>
-      </Grid>
+      </Grid> */}
       <Grid
         sx={{
           display: "flex",
