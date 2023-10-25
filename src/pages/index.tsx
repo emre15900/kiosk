@@ -6,49 +6,57 @@ interface ButtonProps {
   title: string;
   icon: string;
   link: string;
+  img: string;
 }
 
 const buttons: readonly ButtonProps[] = [
   {
     id: 1,
     title: "Cash \n Withdrawal",
-    icon: "/images/home-screen-icon-1.png",
+    icon: "/images/animate/home-screen-icon-1.gif",
+    img: "/images/home-screen-icon-1.png",
     link: "/pin",
   },
   {
     id: 2,
     title: "Cash \n Deposit",
-    icon: "/images/home-screen-icon-2.png",
+    icon: "/images/animate/home-screen-icon-2.gif",
+    img: "/images/home-screen-icon-2.png",
     link: "/pin",
   },
   {
     id: 3,
     title: "Buy/Sell \n Crypto",
-    icon: "/images/home-screen-icon-3.png",
+    icon: "/images/animate/home-screen-icon-3.gif",
+    img: "/images/home-screen-icon-3.png",
     link: "/pin",
   },
   {
     id: 4,
     title: "Cross Border \n Money Transfer",
-    icon: "/images/home-screen-icon-4.png",
+    icon: "/images/animate/home-screen-icon-4.gif",
+    img: "/images/home-screen-icon-4.png",
     link: "/pin",
   },
   {
     id: 5,
     title: "Get Pay \n Visa Card",
-    icon: "/images/home-screen-icon-5.png",
+    icon: "/images/animate/home-screen-icon-5.gif",
+    img: "/images/home-screen-icon-5.png",
     link: "/pin",
   },
   {
     id: 6,
     title: "Service \n For Dealers",
-    icon: "/images/home-screen-icon-6.png",
+    icon: "/images/animate/home-screen-icon-6.gif",
+    img: "/images/home-screen-icon-6.png",
     link: "/pin",
   },
   {
     id: 7,
     title: "FX \n Exchange",
-    icon: "/images/home-screen-icon-7.png",
+    icon: "/images/animate/home-screen-icon-7.gif",
+    img: "/images/home-screen-icon-7.png",
     link: "/pin",
   },
 ];
@@ -327,7 +335,7 @@ export default function Home() {
               cursor: "pointer",
             }}
           >
-         Exchange
+            Exchange
           </Typography>
         </Link>
         <Link href="/exchange-step-2">
@@ -367,6 +375,31 @@ export default function Home() {
           </Typography>
         </Link>
       </Grid>
+      <Grid
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
+          mt:"-40px"
+        }}
+      >
+        <Grid sx={{ width: "550px" }}>
+          <img src="/images/logo.webp" alt="logo" width="100%" />
+        </Grid>
+        <Typography
+          variant="h6"
+          sx={{ mt: "-30px", color: "#000000", fontWeight: 600 }}
+        >
+          slakfjllsafljks sjfksfjl
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          sx={{ mb: 12, mt: 2, color: "#000000", fontWeight: 400 }}
+        >
+          slakfjllsafljks sjfksfjl <strong>220 sfsfa</strong>
+        </Typography>
+      </Grid>
       <Grid container spacing={2}>
         {rows?.map((row, rowIndex) => (
           <Grid key={rowIndex} container justifyContent="center" spacing={2}>
@@ -375,7 +408,7 @@ export default function Home() {
                 <Link href={button.link}>
                   <Card
                     sx={{
-                      background: "#F4F4F4",
+                      background: "#ffffff",
                       borderRadius: "30px",
                       padding: "90px 30px 50px 30px",
                       display: "flex",
@@ -389,12 +422,16 @@ export default function Home() {
                       maxWidth: "380px",
                       maxHeight: "500px",
                       minHeight: "430px",
+                      border: "2px solid #444094",
                       "&:hover": {
-                        border: "1px solid #444094",
+                        border: "2px solid rgb(84 253 95 / 87%)",
                       },
                     }}
                   >
                     <Grid sx={{ width: "120px" }}>
+                      {/* <video autoPlay loop muted poster={button.img}>
+                        <source src={button.icon} type="video/mp4" />
+                      </video> */}
                       <img src={button.icon} alt="icon" width="100%" />
                     </Grid>
                     <Typography
@@ -430,6 +467,15 @@ export default function Home() {
             ))}
           </Grid>
         ))}
+      </Grid>
+      <Grid>
+        <Grid sx={{ width: "100%" }}>
+          <img
+            src="/images/animate/buildings.gif"
+            alt="ana-binalar"
+            width="100%"
+          />
+        </Grid>
       </Grid>
     </Grid>
   );
