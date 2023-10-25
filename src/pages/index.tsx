@@ -381,7 +381,7 @@ export default function Home() {
           alignItems: "center",
           justifyContent: "center",
           flexDirection: "column",
-          mt:"-40px"
+          mt: "-40px",
         }}
       >
         <Grid sx={{ width: "550px" }}>
@@ -400,73 +400,86 @@ export default function Home() {
           slakfjllsafljks sjfksfjl <strong>220 sfsfa</strong>
         </Typography>
       </Grid>
-      <Grid container spacing={2}>
-        {rows?.map((row, rowIndex) => (
-          <Grid key={rowIndex} container justifyContent="center" spacing={2}>
-            {row.map((button: any) => (
-              <Grid key={button.id} item xs={12} sm={6} md={3}>
-                <Link href={button.link}>
-                  <Card
-                    sx={{
-                      background: "#ffffff",
-                      borderRadius: "30px",
-                      padding: "90px 30px 50px 30px",
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      boxShadow: "none",
-                      gap: "20px",
-                      cursor: "pointer",
-                      transition: "all 0.1s ease",
-                      maxWidth: "380px",
-                      maxHeight: "500px",
-                      minHeight: "430px",
-                      border: "2px solid #444094",
-                      "&:hover": {
-                        border: "2px solid rgb(84 253 95 / 87%)",
-                      },
-                    }}
-                  >
-                    <Grid sx={{ width: "120px" }}>
-                      {/* <video autoPlay loop muted poster={button.img}>
-                        <source src={button.icon} type="video/mp4" />
-                      </video> */}
-                      <img src={button.icon} alt="icon" width="100%" />
-                    </Grid>
-                    <Typography
-                      dangerouslySetInnerHTML={{
-                        __html: button.title.replace("\n", "<br />"),
-                      }}
+      <Grid
+        sx={{
+          backgroundImage: "url('/images/animate/clouds.gif')",
+        }}
+      >
+        <Grid
+          container
+          spacing={2}
+          sx={{
+            backgroundImage: "url('/images/animate/birds.gif')",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          {rows?.map((row, rowIndex) => (
+            <Grid key={rowIndex} container justifyContent="center" spacing={2}>
+              {row.map((button: any) => (
+                <Grid key={button.id} item xs={12} sm={6} md={3}>
+                  <Link href={button.link}>
+                    <Card
                       sx={{
-                        textAlign: "center",
-                        color: "#444094",
-                        fontSize: "22px",
-                      }}
-                    ></Typography>
-                    <Grid
-                      sx={{
+                        background: "#ffffff",
+                        borderRadius: "30px",
+                        padding: "90px 30px 50px 30px",
                         display: "flex",
-                        justifyContent: "flex-end",
-                        alignItems: "flex-end",
-                        width: "100%",
-                        mt: 2,
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        boxShadow: "none",
+                        gap: "20px",
+                        cursor: "pointer",
+                        transition: "all 0.1s ease",
+                        maxWidth: "380px",
+                        maxHeight: "500px",
+                        minHeight: "430px",
+                        border: "2px solid #444094",
+                        "&:hover": {
+                          border: "2px solid rgb(84 253 95 / 87%)",
+                        },
                       }}
                     >
-                      <Grid sx={{ width: "45px" }}>
-                        <img
-                          src="/images/arrow-right.png"
-                          alt="icon"
-                          width="100%"
-                        />
+                      <Grid sx={{ width: "120px" }}>
+                        {/* <video autoPlay loop muted poster={button.img}>
+                        <source src={button.icon} type="video/mp4" />
+                      </video> */}
+                        <img src={button.icon} alt="icon" width="100%" />
                       </Grid>
-                    </Grid>
-                  </Card>
-                </Link>
-              </Grid>
-            ))}
-          </Grid>
-        ))}
+                      <Typography
+                        dangerouslySetInnerHTML={{
+                          __html: button.title.replace("\n", "<br />"),
+                        }}
+                        sx={{
+                          textAlign: "center",
+                          color: "#444094",
+                          fontSize: "22px",
+                        }}
+                      ></Typography>
+                      <Grid
+                        sx={{
+                          display: "flex",
+                          justifyContent: "flex-end",
+                          alignItems: "flex-end",
+                          width: "100%",
+                          mt: 2,
+                        }}
+                      >
+                        <Grid sx={{ width: "45px" }}>
+                          <img
+                            src="/images/arrow-right.png"
+                            alt="icon"
+                            width="100%"
+                          />
+                        </Grid>
+                      </Grid>
+                    </Card>
+                  </Link>
+                </Grid>
+              ))}
+            </Grid>
+          ))}
+        </Grid>
       </Grid>
       <Grid>
         <Grid sx={{ width: "100%" }}>
